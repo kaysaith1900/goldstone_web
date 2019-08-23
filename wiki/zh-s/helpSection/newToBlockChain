@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>GoldStone 帮助中心</title>
+	<meta content="GoldStone Wallet - Get App" name="description">
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<!-- 禁用用户手动缩放手势 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- 设置webapp的icon -->
+	<link rel="apple-touch-icon-precomposed" href="logo.png"/>
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content=G oldStone
+	">
+	<link rel="icon " sizes="192x192 " href="../../../assets/touch/chrome-touch-icon.png ">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable " content="yes ">
+	<meta name="apple-mobile-web-app-status-bar-style " content="black-translucent ">
+	<meta name="apple-mobile-web-app-title " content="GoldStone ">
+	<link rel="apple-touch-icon " href="../../../assets/touch/apple-touch-icon.png ">
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage " content="../../../assets/touch/ms-touch-icon.png ">
+	<meta name="msapplication-TileColor " content="#2F3BA2 ">
+	<!-- Color the status bar on mobile devices -->
+	<meta name="theme-color " content="#3AB54A ">
+	<!-- 引入通用css -->
+	<link rel="stylesheet " href="../../../css/helpGroup.css " type="text/css " media="all ">
+
+</head>
+
+<body class="cursorDefault disableDefaultAction flexContainerWrap">
+<!-- 头部header -->
+<div class="navigation green blueToGreen ">
+	<!--<a href="index.html " class="nav logo cursorPointer "></a>-->
+	<a href="https://www.goldstone.io/zh-s/helpCenter" class="nav title">
+		&nbsp;&nbsp;帮助中心
+	</a>
+
+</div>
+<header class="header white shadow">
+	<!-- <h1 class="title fontWhite ">Help Center</h1> -->
+	<div class="headerIcon guideIcon"></div>
+	<h3 class="headerTitle fontBlue ">区块链新手</h3>
+	<h3 class="blockDescription fontGray ">如果你之前未接过区块链相关的概念，或者没有用过区块链钱包，下面的一些概念解释可能会有帮助。 </h3>
+</header>
+
+<!-- 页面描述 -->
+
+<!-- 问答单元 -->
+<main class="">
+
+	<section class="tableSection flexContainerWrap">
+		<div class="sectionTitle fontBlue"> 区块链基本概念</div>
+
+		<!--
+			<a href = "../address" class="tableItem white fontBlack">什么是<span class = "attentionText" >地址</span>?
+			</a>
+
+			<a href = "../blockchain"  class="tableItem white fontBlack">
+				<span class = "attentionText" >区块链</span>And
+				<span class = "attentionText" >区块(block)</span>
+			</a> -->
+
+		<a href = "../privateKey" class="tableItem white fontBlack">
+			什么是
+			<span class = "attentionText" >明文私钥</span>?
+		</a>
+		<a href = "../keystore" class="tableItem white fontBlack">
+			什么是
+			<span class = "attentionText" >keystore</span>?
+		</a>
+
+		<a  href = "../mnemonics" class="tableItem white fontBlack">什么是 <span class = "attentionText" >助记词</span>?</a>
+		<!--
+					<a  href = "../mnemonic" class="tableItem white fontBlack">什么是 <span class = "attentionText" >转账哈希(hash)</span>?</a> -->
+
+	</section>
+
+	<section class="tableSection flexContainerWrap">
+		<div class="sectionTitle fontBlue"> 以太坊</div>
+		<!-- <a href = "../ethereum"  class="tableItem white fontBlack">以太坊(Ethereumn)</a> -->
+
+		<a href = "../gas" class="tableItem white fontBlack">什么是
+			<span class = "attentionText" >燃气费/矿工费/Gas</span>?
+		</a>
+	</section>
+
+
+</main>
+</body>

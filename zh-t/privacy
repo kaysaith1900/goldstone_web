@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>隱私協議</title>
+	<meta charset="utf-8">
+	<meta content="GoldStone Wallet - Privacy" name="description">
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<!-- 禁用用户手动缩放手势 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- 设置webapp的icon -->
+	<link rel="apple-touch-icon-precomposed" href="../assets/logo.png"/>
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Add to home screen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content=G oldStone
+	">
+	<link rel="icon " sizes="192x192 " href="../assets/touch/chrome-touch-icon.png ">
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable " content="yes ">
+	<meta name="apple-mobile-web-app-status-bar-style " content="black-translucent ">
+	<meta name="apple-mobile-web-app-title " content="GoldStone ">
+	<link rel="apple-touch-icon " href="../assets/touch/apple-touch-icon.png ">
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage " content="../assets/touch/ms-touch-icon.png ">
+	<meta name="msapplication-TileColor " content="#2F3BA2 ">
+	<!-- Color the status bar on mobile devices -->
+	<meta name="theme-color " content="#3AB54A ">
+	<!-- 设置CSS文件指向 -->
+	<link rel="stylesheet" href="../css/conditions.css" type="text/css" media="all">
+</head>
+
+<body class="disable-default-action">
+<div class="container">
+	<header>
+		<div class="appIcon">
+			<h2 class="appName">G O L D S T O N E</h2>
+		</div>
+	</header>
+	<main class="main">
+		<div class="headerBlock">
+			<h1 class="headerTitle">隱私政策</h1>
+		</div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">數據管理員與所有者</h3>
+			<p class="contentText">所有者：GoldStone</p>
+			<p class="contentText">所有者聯系電子郵件：privacy@goldstone.io</p></div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">我們的承諾</h3>
+			<p class="contentText bulletContent">• 我們
+				<span class="attentionText">絕不會</span>銷售您的數據</p>
+			<p class="contentText bulletContent">• 您的Keystore/助記詞/私鑰由您自己掌控，永遠不會上傳到Goldstone服務器，也不會上傳到雲端其他地方。</p>
+			<p class="contentText bulletContent">• 我們將盡最大努力提高您對數據的控制權和所有權</p></div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">收集的數據類型</h3>
+			<p class="contentText">本應用程序自行或通過第三方收集的個人數據類型包括：設備信息與使用數據。有關收集的每種個人數據的詳細信息，請參閱本隱私政策的專用章節或在收集數據之前顯示的具體說明文本。</p>
+			<p class="contentText">
+				用戶在使用數據的情況下，在使用本應用程序時自動收集。本應用程序請求的所有數據都是強制性的，未能提供此數據可能導致此應用程序無法提供其服務。如果本應用程序明確指出某些數據不是強制性的，則用戶可以自由地不傳達此數據，而不會對服務的可用性或功能產生任何影響</p>
+			<p class="contentText">如果用戶不確定哪些個人數據是強制性的，歡迎聯系GoldStone。</p></div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">數據處理</h3>
+			<h4 class="thirdOrderTitle">處理方法</h4>
+			<p class="contentText">數據系統將以適當的方式處理用戶數據，並采取適當的安全措施，防止對數據進行未經授權的訪問，披露，修改或未經授權的銷毀。</p>
+			<p class="contentText">
+				數據處理采用計算機和/或IT支持的工具進行，遵循嚴格與所示目的相關的組織程序和模式。除數據控制器外，在某些情況下，某些類型的負責人可能會訪問數據，這些負責人涉及網站的運行（管理，銷售，市場營銷，法律，系統管理）或外部各方（如第三方如有必要，由業主指定為第三方技術服務提供商，郵件運營商，托管服務提供商，IT公司，通信代理商）。</p>
+		</div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">數據的使用</h3>
+			<p class="contentText">收集有關用戶的數據以允許所有者提供其服務以及以下用途：分析。本文檔的特定部分概述了用於各種用途的個人數據。</p></div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">有關個人資料處理的詳細資訊</h3>
+			<p class="contentText">收集個人資料用於以下目的並使用以下服務：</p>
+			<h4 class="thirdOrderTitle">Google Analytics（Google Inc。）</h4>
+			<p class="contentText">終止後，您使用本服務的權利將立即停止。如果您想終止您的帳戶，您可以停止使用本服務。</p>
+			<p class="contentText">Google可能會使用收集的數據來對其自己的廣告網 絡的廣告進行上下文化和個性化。</p>
+			<p class="contentText">收集的個人數據：Cookies和使用數據。</p></div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">有關數據收集和處理的其他信息</h3>
+			<h4 class="thirdOrderTitle">法律訴訟</h4>
+			<p class="contentText">數據管理員可以在法庭上或在由於不當使用本應用程序或相關服務而可能導致法律訴訟的階段將用戶的個人數據用於合法目的。</p>
+			<p class="contentText">用戶聲明要知道，數據管理員可能需要根據公共當局的要求披露個人數據。</p>   
+			<h4 class="thirdOrderTitle">有關用戶個人數據的其他信息</h4>
+			<p class="contentText">除了本隱私政策中包含的信息外，本應用程序還可以根據請求向用戶提供有關特定服務或收集和處理個人數據的額外信息。</p>
+			<h4 class="thirdOrderTitle">系統日誌和維護</h4>
+			<p class="contentText">出於操作和維護的目的，本應用程序和任何第三方服務可能會收集記錄與此應用程序（系統日誌）交互的文件或為此目的使用其他個人數據（如IP地址）。</p>   
+			<h4 class="thirdOrderTitle">本政策中未包含的信息</h4>
+			<p class="contentText">有關個人數據收集或處理的更多細節可以隨時從數據管理員那裏請求。請參閱本文檔開頭的聯系信息。</p>
+			<h4 class="thirdOrderTitle">用戶權限</h4>
+			<p class="contentText">
+				用戶有權隨時了解他們的個人資料是否已經存儲，並可以咨詢數據管理員以了解其內容和來源，以驗證其準確性或要求對其進行補充，取消，更新或更正，或者將其轉換為匿名格式，或者阻止任何違反法律的數據，並且出於任何和所有正當理由反對他們的處理。請按上述聯系方式將數據發送給數據管理員。</p>
+			<h4 class="thirdOrderTitle">此應用程序不支持"不跟蹤"請求。</h4>
+			<p class="contentText">要確定它使用的任何第三方服務是否符合"請勿跟蹤"請求，請閱讀其隱私政策。</p>
+			<h4 class="thirdOrderTitle">此隱私政策的變更</h4>
+			<p class="contentText">  
+				數據管理員保留隨時通過在此頁面上通知其用戶的權利對本隱私政策進行更改的權利。強烈建議經常檢查此頁面，請參閱底部列出的最後修改日期。如果用戶反對策略的任何更改，用戶必須停止使用此應用程序，並可以請求數據控制器刪除個人數據。除非另有說明，否則當時的隱私政策適用於數據管理員有關用戶的所有個人數據。</p>
+		</div>
+		<div class="conditionBlock">
+			<h3 class="subtitle">定義和法律參考</h3>
+			<h4 class="thirdOrderTitle">個人資料（或資料）</h4>
+			<p class="contentText">任何有關自然人，法人，機構或協會的信息，通過參考任何其他信息，包括個人識別碼，即可或可以間接識別。</p>
+			<h4 class="thirdOrderTitle">使用情況數據</h4>
+			<p class="contentText">
+				從本應用程序（或本應用程序中使用的第三方服務）自動收集的信息，其中可包括：使用此應用程序的用戶使用的計算機的IP地址或域名，URI地址（統壹資源標識符），時間，用於向服務器提交請求的方法，作為響應接收的文件的大小，指示服務器的答案的狀態（成功的結果，錯誤等）的數字代碼，起源國，用戶使用的瀏覽器和操作系統的功能，每次訪問的各種時間細節（例如，在應用程序內的每個頁面上花費的時間）以及關於應用程序內遵循的路徑的細節，特別參考頁面的順序訪問以及關於設備操作系統和/或用戶IT環境的其他參數。</p>
+			<h4 class="thirdOrderTitle">用戶</h4>
+			<p class="contentText">使用此應用程序的個人必須與個人數據所涉及的數據主體壹致或經數據主體授權。</p>
+			<h4 class="thirdOrderTitle">數據主體</h4>
+			<p class="contentText">個人資料所指的合法或自然人。</p>
+			<h4 class="thirdOrderTitle">數據處理者（或數據主管）</h4>
+			<p class="contentText">自然人，法人，公共行政機構或由數據管理員授權的任何其他機構，協會或組織根據本隱私政策處理個人數據。</p>
+			<h4 class="thirdOrderTitle">數據管理員（或所有者）</h4>
+			<p class="contentText">
+				自然人，法人，公共行政機構或任何其他擁有該權利的機構，團體或組織，與其他數據管理員壹起，就個人數據的目的和處理方法以及所使用的手段（包括有關操作和使用本應用程序的安全措施。數據控制器，除非另有規定，是本申請的所有者。</p>
+			<h4 class="thirdOrderTitle">此應用程序</h4>
+			<p class="contentText">收集用戶個人資料的硬件或軟件工具。</p></div>
+		<div class="signatureBlock">
+			<h5 class="signature">最新更新：2018年5月15日</h5></div>
+	</main>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/*禁止显示touch选中效果*/
+.disableDefaultAction {
+  -webkit-touch-callout: none;
+}
+body {
+  -webkit-touch-callout: none;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorDefault {
+  cursor: default;
+}
+.noTouchStyleOnMobileDevice {
+  -webkit-tap-highlight-color: transparent;
+}
+.fullSize {
+  width: 100%;
+  height: 100%;
+}
+.fullFill {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.flexContainerWrap {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  /*items纵轴居中*/
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  /*行纵轴居中*/
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  align-content: flex-start;
+}
+.flexContainerWrap1 {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  /*items纵轴居中*/
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  /*行纵轴居中*/
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+.flexContainer {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  /*items纵轴居中*/
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  /*行纵轴居中*/
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+}

@@ -1,0 +1,130 @@
+<div class = "chains">
+  <script>
+    var titles = ['Bitcoin', 'Ethereum', 'EOS', 'Bitcoin Cash', 'Litecoin', 'Ethereum Classic', setInternationalText('Coming Soon', '即将支持')]
+    var subtitles = [
+      setInternationalText(
+        'Support for the use of the main network and Testnet3 test network',
+        '支持比特币主网，以及 Testnet3 测试网的同时使用.'
+      ),
+      setInternationalText(
+        'Provides its own nodes and all the main and test network nodes of Infura.',
+        '提供自有节点以及 Infura 的全部主网及测试网节点的同时使用.'
+      ),
+      setInternationalText(
+        'Supports simultaneous use of EOS primary network nodes and Jungle test network nodes.',
+        '支持 EOS 主网节点以及 Jungle 测试网节点的同时使用.'
+      ),
+      setInternationalText(
+        'Supports Bitcoin Cash\'s own main network nodes and test nodes for simultaneous use.',
+        '支持 Bitcoin Cash 自有主网节点以及测试节点的同时使用.'
+      ),
+      setInternationalText(
+        'Supports Litecoin\'s own main network nodes and test nodes for simultaneous use.',
+        '支持 Litecoin 自有主网节点以及测试节点的同时使用.'
+      ),
+      setInternationalText(
+        'Supports Ethereum Classic\'s own and simultaneous use of the main network and test network nodes provided by GasTrack.',
+        '支持 Ethereum Classic 自有以及 GasTrack 提供的主网及测试网节点的同时使用.'
+      ),
+      setInternationalText(
+        'we will support new blockchain that depending on the level of use.',
+        '根据使用程度我们会不定期的支持新的区块链'
+      )
+    ]
+    var icon = ['BTC.svg', 'ETH.svg', 'EOS.svg', 'BCH.svg', 'LTC.svg', 'ETC.svg', 'MORE.svg']
+    for (var index = 0; index < 7; index++) {
+      var iconPath = './resources/images/' + icon[index] + ''
+      $('.chains').append(
+        '<div class="card"><img class="icon" src="' + iconPath + '"/><h1>' + titles[index] + '</h1><p>' + subtitles[index] + '</p></div>'
+      )
+    }
+
+    if (isMobile) {
+      $('.chains .card').addClass('mobileCard')
+      $('.chains .card .icon').attr('class', 'mobileIcon')
+      $('.chains .card h1').css({ fontSize: 14 })
+    }
+  </script>
+</div>
+
+
+<style type = "text/css" media = "screen">
+  @keyframes scale {
+    from {
+      box-shadow: rgba(0, 0, 0, 0.35) 0 3px 3px;
+      transform: scale(1);
+    }
+    to {
+      box-shadow: rgba(0, 0, 0, 0.3) 0 10px 10px;
+      transform: scale(1.05);
+    }
+  }
+
+  .card {
+    margin: 20px;
+    width: calc((100% - 160px) / 4);
+    height: 320px;
+    float: left;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 3px 3px;
+    transition: all 300ms linear;
+    text-align: center;
+  }
+
+  .chains {
+    float: left;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 10px 10px;
+    transition: all 300ms linear;
+  }
+
+  .card .icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .mobileIcon {
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .card h1 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .card p {
+    font-size: 13px;
+    font-family: "Avenir Next", Arial, serif;
+    text-align: center;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    line-height: 16px;
+    max-height: 48px;
+    color: #aaa;
+    position: relative;
+  }
+
+  .mobileCard {
+    width: calc((100% - 60px) / 2);
+    margin-right: 0;
+    margin-bottom: 0;
+    height: 240px;
+  }
+
+</style>

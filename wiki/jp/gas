@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GoldStone Wiki - What is gas fee/miner fee/Gas?</title>
+    <!-- 支持utf-8 -->
+    <meta charset="utf-8">
+    <meta content="What is Miner fee / Gas?" name="description">
+    <meta name="keywords" content="GolStone, Wallet, ETH, Ethereum, Crypto Currency, Bitcoin, EOS, LTC, Blockchain">
+    <!-- 支持utf-8 -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 禁用用户手动缩放手势 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <!-- 设置webapp的icon -->
+    <link rel="apple-touch-icon-precomposed" href="logo.png" />
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content=G oldStone">
+    <link rel ="icon" sizes ="192x192" href ="../../assets/touch/chrome-touch-icon.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name ="apple-mobile-web-app-capable" content ="yes">
+    <meta name ="apple-mobile-web-app-status-bar-style" content ="black-translucent">
+    <meta name ="apple-mobile-web-app-title" content ="GoldStone">
+    <link rel ="apple-touch-icon" href ="../../assets/touch/apple-touch-icon.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name ="msapplication-TileImage" content ="../../assets/touch/ms-touch-icon.png">
+    <meta name ="msapplication-TileColor" content ="#2F3BA2">
+    <!-- Color the status bar on mobile devices -->
+    <meta name ="theme-color" content ="#3AB54A">
+    <!-- 引用mini js -->
+    <script src="../../scripts/jquery-2.2.0.min.js" type="text/javascript"></script>    <script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>
+    <script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>    <script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>
+    <!-- 加载样式 -->
+    <link rel ="stylesheet " href ="../../css/main.css " type ="text/css " media ="all ">
+    <link rel ="stylesheet " href ="../../css/wiki.css " type ="text/css " media ="all ">
+</head>
+
+<body class="cursorDefault disableDefaultAction ">
+    <header class="headerView ">
+    </header>
+    <main class="container ">
+        <h2 class="wiki title ">What is Miner fee / Gas?</h2>
+        <div class="block ">
+            <div class="dot green "></div>
+            <div class="contentTitle ">Gas Cost = Miner Cost = Gas</div>
+            <div class="content ">
+                <div class="paragraph ">
+                    <span class="attentionText ">Gas Charges</span> , Also known as
+                    <span class="attentionText ">Miners' Fees</span> Or
+                    <span class="attentionText ">Gas</span>. This is the fee paid to the miner during the transaction.
+                </div>
+                <div class="paragraph ">
+                    In Ethereum, gas costs
+                    <span class="attentionText ">Ethereum (ETH)</span> pricing. Regardless of which token you transfer, ether(ETH) is required as the miner's fee. Please ensure that you have at least 0.01 ETHs in the address where you initiate the transfer.
+                </div>
+                <div class="paragraph ">
+                    In GoldStone, you pay
+                    <span class="attentionText ">All Gas Charges</span> Both will be sent to Ethereum's miners, and Goldstone will not charge any fees in the transaction.
+                </div>
+            </div>
+        </div>
+
+        <div class="block ">
+            <div class="dot green "></div>
+            <div class="contentTitle ">GoldStone Gas Charges</div>
+            <div class="content ">
+                <div class="paragraph ">
+                    In GoldStone, we recommend the right Gas strategy for you compared to the speed of the Gas price and transaction in the recent block. You can choose
+                    <span class="attentionText ">Quick</span>
+                    <span class="attentionText ">Standard</span>
+                    <span class="attentionText ">Slowness</span> To trade, we will automatically match the corresponding gas value for you.
+                </div>
+                <div class="paragraph ">
+                    When transferring ETH or other tokens, click on the gas settings screen
+                    <span class="attentionText ">Custom Gas Charges</span> You can manually set the gas value.
+                </div>
+            </div>
+        </div>
+
+        <div class="block ">
+            <div class="dot green "></div>
+            <div class="contentTitle ">Custom Gas Charges</div>
+            <div class="content ">
+                <div class="paragraph ">
+                    You can also pass
+                    <span class="attentionText ">Custom Gas Charges</span> Set the gas value manually.
+                </div>
+                <div class="paragraph ">
+                    <div class="formula">Gas Cost = Gas Price x Actual Gas Consumption</div>
+                </div>
+                <div class="paragraph ">
+                    <span class="attentionText ">Gas Price</span> This is the number of ETHs you pay for each unit of Gas. In general, the higher the unit price of gas, the faster the transaction is completed. In contrast, the unit price of gas is too low, and the transaction may not be entered by miners, causing the transaction to be slow or even impossible.
+                </div>
+                <div class="paragraph ">
+                    <span class="attentionText ">Gas Limit</span> This is the maximum amount of Gas you are willing to pay for this transaction. The amount of Gas consumed during actual trading is based on the amount of data transmitted on the exchange.
+                </div>
+                <div class="paragraph ">
+                    The amount of Gas required for an ordinary ETH transfer is 21,000. If the transaction comes with more information (such as remarks), the amount of Gas needed will increase accordingly. The transfer of tokens differs from the protocol of the token itself.
+                </div>
+                <div class="paragraph ">
+                    <div class="label">
+                        <div class="dot yellow "></div>
+                        <div>Gas Limit must be greater than the estimated Gas spend. </div>
+                    </div>
+                    <div class="label">
+                        <div class="dot yellow "></div>
+                        <div>When the gas spent on the transaction does not reach the gas limit you set, the remaining funds will be returned to your account. </div>
+                    </div>
+                    <div class="label">
+                        <div class="dot yellow "></div>
+                        <div> When the transaction consumes more gas than the gas limit, the gas is exhausted and the transaction stops. The gas cost consumed will not be refunded. </div>
+                    </div>
+                </div>
+                <div class="paragraph ">
+                    You can view the details of gas charges in the GoldStone transaction details.
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

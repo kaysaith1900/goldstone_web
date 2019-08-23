@@ -1,0 +1,61 @@
+<div class = "content">
+  <script>
+    var exchangeIcons = [
+      './resources/exchange/bithumb.svg',
+      './resources/exchange/binance.svg',
+      './resources/exchange/bitfinex.svg',
+      './resources/exchange/hitbtc.svg',
+      './resources/exchange/coinbasepro.svg',
+      './resources/exchange/okex.svg',
+      './resources/exchange/huobi.svg',
+      './resources/exchange/upbit.svg',
+      './resources/exchange/Poloniex.svg',
+      './resources/exchange/zb.svg',
+      './resources/exchange/kraken.svg',
+      './resources/exchange/BitBank.svg',
+      './resources/exchange/BitStamp.svg',
+      './resources/exchange/Bibox.svg',
+      './resources/exchange/fcoin.svg',
+      './resources/exchange/Newdex.svg'
+    ]
+    var container = $('.bottom .content')
+    for (var index = 0; index < exchangeIcons.length; index++) {
+      container.append('<div class="exchangeLogo" id = ' + 'exchange' + index + '></div>')
+      $('#' + 'exchange' + index + '').css('background-image', 'url("' + exchangeIcons[index] + '")')
+    }
+    var exchangeLogoWidth
+    if (isMobile === true) exchangeLogoWidth = 140
+    else exchangeLogoWidth = 240
+    var rowCount = Math.floor(container.width() / (exchangeLogoWidth + 20))
+    var paddingLeft = (container.width() - (exchangeLogoWidth + 20) * rowCount) / 2
+    container.css({ paddingLeft: paddingLeft })
+
+    if (isMobile === true) {
+      $('.exchangeLogo').css({ width: exchangeLogoWidth, height: exchangeLogoWidth / 2, marginTop: -20 })
+      container.css({ paddingTop: 40, paddingBottom: 40 })
+    }
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  .exchangeLogo {
+    width: 240px;
+    height: 120px;
+    float: left;
+    margin: -30px 10px 0;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 300ms linear;
+  }
+
+  .exchangeLogo:hover {
+    transform: scale(1.2);
+    transition: all 300ms linear;
+  }
+
+  .bottom .content {
+    padding: 50px 0 20px;
+    width: 100%;
+  }
+</style>

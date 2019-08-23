@@ -1,0 +1,85 @@
+@import "helpCenter";
+
+html, body {
+  background-color: #F6F7FB
+}
+
+.navigation {
+  position: fixed;
+  z-index: 100px;
+  height: 24px;
+  width: calc(100% - 20px);
+  padding: 10px 10px;
+}
+
+.header {
+  margin-top: 44px;
+  height: 190px;
+}
+
+.nav.logo {
+  position: absolute;
+  left: 30px;
+  width: 28px;
+  height: 28px;
+}
+
+a.nav.title {
+  font-size: 18px;
+  font-weight: normal;
+  color:  white;
+}
+
+.headerIcon {
+  z-index: -1;
+  position: absolute;
+  margin: 20px calc(50% - 40px);
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.headerTitle {
+  margin: 105px 0 0px 0;
+  text-align: center;
+  width: 100%;
+}
+.blockDescription {
+  margin: 0 10%;
+  width: 80%
+}
+
+main {
+  margin-top: 250px;
+  padding: 10px 20px 50px 20px;
+  width: calc(100% - 80px)
+}
+
+
+.tableSection {
+  padding: 0 0 20px 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 20px 0 15px 0;
+  width: 100% ;
+}
+
+
+/* table */
+a.tableItem {
+  float: left;
+  height: 20px;
+  padding: 16px 20px;
+  margin: 5px 10px;
+  width: 280px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: normal;
+  box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.1);
+  .link(@darkBlue, @blue, @green)
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	  <title>觀察錢包 </title>
+	<!-- 支持utf-8 -->
+	<meta charset="utf-8">
+	<meta content="GoldStone Wallet - 觀察錢包" name="description">
+	<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<!-- 禁用用户手动缩放手势 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- 设置webapp的icon -->
+	<link rel="apple-touch-icon-precomposed" href="logo.png" />
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content=G oldStone">
+	<link rel ="icon" sizes ="192x192" href ="../../assets/touch/chrome-touch-icon.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name ="apple-mobile-web-app-capable" content ="yes">
+	<meta name ="apple-mobile-web-app-status-bar-style" content ="black-translucent">
+	<meta name ="apple-mobile-web-app-title" content ="GoldStone">
+	<link rel ="apple-touch-icon" href ="../../assets/touch/apple-touch-icon.png">
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name ="msapplication-TileImage" content ="../../assets/touch/ms-touch-icon.png">
+	<meta name ="msapplication-TileColor" content ="#2F3BA2">
+	<!-- Color the status bar on mobile devices -->
+	<meta name ="theme-color" content ="#3AB54A">
+	<!-- 引用mini js -->
+	<script src="../../scripts/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>
+	<!-- 加载样式 -->
+    <link rel ="stylesheet " href ="../../css/main.css " type ="text/css " media ="all ">
+    <link rel ="stylesheet " href ="../../css/wiki.css " type ="text/css " media ="all ">
+</head>
+<body class="cursorDefault disableDefaultAction">
+<header class="headerView ">
+</header>
+  
+<main class="container ">
+	<h2 class="wiki tittle">什麽是觀察錢包?</h2>
+
+	<div class="block ">
+		<div class="dot green"></div>
+		<div class="contentTitle ">觀察錢包</div>
+		<div class="content ">
+			<div class="paragraph ">
+				使用
+				<span class="attentionText ">觀察錢包</span>，用戶無需導入私鑰，只需要輸入錢包地址, 就能查看該地址下所有余額與轉賬信息。
+			</div>
+			<div class="paragraph ">觀察錢包只能查看，
+				<span class="attentionText ">不能控制錢包資產</span>，無法對錢包內的資產進行轉移。只有擁有
+				<span class="attentionText ">私鑰</span>/
+				<span class="attentionText ">助記詞</span>/
+				<span class="attentionText ">Keystore(及keystore對應的密碼)</span>才能真正對該錢包下的資產進行轉移操作。
+			</div>
+		</div>
+	</div>
+
+	<div class="block ">
+		<div class="dot green"></div>
+		<div class="contentTitle ">使用</div>
+		<div class="content ">
+			<div class="paragraph ">
+				使用觀察錢包來監聽資產，是壹個有效安全的查看錢包動態的方式。您可以在非交易的時候使用觀察錢包，在需要轉移資產的時候再導入
+				<span class="attentionText ">私鑰</span>/
+				<span class="attentionText ">助憶口令</span>/
+				<span class="attentionText ">Keystore</span>。
+			</div>
+		</div>
+	</div>
+
+	<div class="block tips">
+		<div class="dot green"></div>
+		<div class="contentTitle ">小貼士</div>
+
+		<div class="content ">
+			<div class="paragraph ">
+				只有地址是不能控制財產的！如果您沒有<span class="attentionText ">私鑰</span>/
+				<span class="attentionText ">助記詞</span>/
+				<span class="attentionText ">Keystore(及keystore對應的密碼)</span>，請不要輕易往裏面轉賬！
+			</div>
+
+			<div class="paragraph ">
+				源於以太坊的透明公開，任何擁有妳地址的人都可以查到妳地址上的資金及交易信息。雖然只有地址並不能控制資產，但容易透露您的資產信息。如果有大額資產，請您分散保管，不要把地址輕易透露給他人。
+			</div>
+		</div>
+	</div>
+</main>
+</body>

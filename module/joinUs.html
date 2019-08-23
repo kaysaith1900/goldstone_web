@@ -1,0 +1,120 @@
+<div class = "content">
+  <div class = "joinUsIntro">
+    <div class = "intro">
+      <div class = "left webLeft">
+        <h1 class = "introTitle"></h1>
+        <p class = "introSubtitle"></div>
+      <div class = "right"><img src = "./resources/images/joinUs.png" srcset = "./resources/images/joinUs@2x.png"/>
+      </div>
+    </div>
+  </div>
+  <div class = "wave"></div>
+  <div class = "openings splitCellColor">
+    <div class = "intro">
+      <div class = "top">
+        <h1 class = "introTitle centerText"></h1>
+        <p class = "introSubtitle centerText"></p>
+      </div>
+      <button class="contactUsButton">CONTACT US</button>
+    </div>
+  </div>
+  <div class = "positions splitCellColor"></div>
+  <script>
+    $('.contactUsButton').html(setInternationalText('CONTACT US', '联系我们'))
+    var joinUsTitle = setInternationalText('Want To Work Together?', '想不想一起工作?')
+    var joinUsDescription = setInternationalText(
+      'each person brings their unique talents to work as a team and make a difference. If you are passionate about the block chain industry and are willing to explore the future of the block chain with us, welcome to join us!',
+      '每个人都将自己独特的才能带入团队，共同发挥作用。 如果您对区块链行业充满热情，并愿意与我们一起探索区块链的未来，欢迎加入我们！'
+    )
+    var openings = setInternationalText('Our Openings', '正在招聘的岗位?')
+    var openingDescription = setInternationalText(
+      'We have job requirements in Beijing and Singapore, check the job requirements that are being recruited and look forward to your joining.',
+      '我们在北京新加坡都有工作岗位需求, 查看正在招聘的岗位需求并期待你的加入.'
+    )
+
+    $('.joinUsIntro .introTitle').html(joinUsTitle)
+    $('.joinUsIntro .introSubtitle').html(joinUsDescription)
+    $('.openings .introTitle').html(openings)
+    $('.openings .introSubtitle').html(openingDescription)
+    $('.positions').load('./component/positions.html')
+
+    $('.openings').on('click',function(){
+      window.location.href = "mailto:feedback@goldstone.io?subject=Work Together&body=Hi, GoldStone";
+    });
+
+    // Mobile Detecting
+    if (isMobile === true) {
+      scaleIntroTitle()
+      setMobileStyle()
+    }
+    addWave()
+
+    function setMobileStyle () {
+      $('.joinUsIntro .left').removeClass('webLeft').css({ marginTop: 60 })
+      $('.joinUsIntro .left .introSubtitle').addClass('centerText')
+      $('.joinUsIntro .left .introTitle').addClass('centerText')
+      $('.joinUsIntro .right img').addClass('mobilePageImage')
+      $('.joinUsIntro .right').addClass('mobileRight').removeClass('right')
+      $('.openings .top .introTitle').addClass('centerText')
+      $('.openings .top .introSubtitle').addClass('centerText')
+    }
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+
+  .openings button {
+    margin-top: 40px;
+    width: 260px;
+    margin-left: calc((100% - 260px) / 2);
+  }
+
+  .joinUsIntro .intro {
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 600px;
+    position: relative;
+  }
+
+  .joinUsIntro .intro .right {
+    right: -80px;
+  }
+
+  .openings .intro {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .openings {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .joinUsIntro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  .mobileRight {
+    float: none;
+    position: relative;
+    margin-top: 0;
+    right: 0;
+  }
+
+  .mobilePageImage {
+    max-width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+  }
+
+  .positions {
+    float: left;
+    width: 100%;
+    padding-bottom: 80px;
+  }
+
+
+</style>

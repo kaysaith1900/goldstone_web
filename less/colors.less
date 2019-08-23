@@ -1,0 +1,112 @@
+//通用色
+@green: #2AB96C;
+@yellow: #ffeb00;
+@cyan: #8DE2C0;
+@blue: #00B2FF;
+@orange: #E75E42;
+@lightBlue: #CBDEE1;
+@lightGreen: #EAFEE8;
+@darkBlue: #122750;
+@darkGreen: #0e6c8c;
+@blueGray: #425460;
+@fontBlueGray: #333F50;
+
+// 灰色
+@backgroundGray: #F4F7FA;
+@lightGray: #B9BFC6;
+@attentionTextBackgroundColor: rgba(37, 143, 48, 0.07);
+
+// 渐变色
+.blueToGreen {
+  background: linear-gradient(180deg, @darkBlue, fade(@darkGreen, 60%))
+}
+.greenToBlue {
+  background: linear-gradient(120deg, @darkGreen, fade(@darkBlue, 10%))
+}
+
+.fillGreen {
+  background-color: @green
+}
+
+.fillWhite {
+  background-color: white
+}
+.fillYellow {
+  background-color: @yellow
+}
+.fillCyan {
+  background-color: @cyan
+}
+.fillBlue {
+  background-color: @blue
+}
+.fillOrange {
+  background-color: @orange
+}
+
+.fillDarkBlue {
+  background-color:  @darkBlue
+}
+.fillDarkGreen {
+  background-color:  @darkGreen
+}
+
+/* 灰色 */
+.fillBackgroundGray {
+  background-color: @backgroundGray
+}
+.fillLightGray {
+  background-color: @lightGray
+}
+
+/* 字体颜色 */
+.fontWhite {
+  color: white;
+}
+
+.fontGray {
+  color: fade(black, 40%);
+}
+.fontBlack {
+  color: @fontBlueGray;
+}
+
+.fontOrange {
+  color: @orange;
+}
+
+.fontGreen {
+  color: #2AB96C
+}
+
+.fontWhite {
+  color: white
+}
+.fontYellow {
+  color: #ffeb00
+}
+.fontCyan {
+  color: #8DE2C0
+}
+.fontBlue {
+  color: #00B2FF
+}
+.fontOpacityWhite(@opacity) {
+  color: fade(white, percentage(@opacity));
+}
+
+.fontOpacityBlack(@opacity) {
+  color: fade(black, percentage(@opacity));
+}
+
+.fontOpacity(@color, @opacity) {
+  color: fade(@color, percentage(@opacity));
+}
+
+/* 渐变色 */
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, #114B6D)
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, #122750)
+}

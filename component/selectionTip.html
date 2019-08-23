@@ -1,0 +1,76 @@
+<div class = "selectionTip">
+  <ul>
+    <li class = "english">English</li>
+    <li class = "chinese">Chinese</li>
+  </ul>
+  <div class = "arrowButton"></div>
+  <script>
+    $('.english').click(function() {
+      removeDashboard()
+      setLanguageCode(0)
+      setTimeout(function() {
+        refreshData()
+      }, 100)
+    })
+    $('.chinese').click(function() {
+      removeDashboard()
+      setLanguageCode(1)
+      setTimeout(function() {
+        refreshData()
+      }, 100)
+    })
+
+    function removeDashboard () {
+      $('.languageDashBoard').remove()
+    }
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  .languageDashBoard {
+    width: 120px;
+    height: auto;
+    min-height: 100px;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 0 50px;
+  }
+
+  .arrowButton {
+    position: absolute;
+    bottom: -10px;
+    z-index: 0;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid white;
+  }
+
+  .selectionTip {
+    position: relative;
+    float: left;
+  }
+
+  .selectionTip ul {
+    position: relative;
+    z-index: 2;
+    float: left;
+    padding: 20px 0;
+  }
+
+  .selectionTip ul li {
+    float: left;
+    width: calc(100% - 40px);
+    color: #6a747d;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  .selectionTip ul li:hover {
+    background-color: #eee;
+  }
+</style>

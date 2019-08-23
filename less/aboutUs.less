@@ -1,0 +1,222 @@
+@import "main";
+@import "colors";
+
+//资源根路径
+@iconCatalogUrl: '../assets/icon/';
+@logoUrl: '../assets/logo.png';
+
+html,
+body {
+  position: absolute;
+  z-index: -1000;
+  background: @lightBlue;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  margin-top: 24px;
+}
+
+.backgroundLayer {
+  position: absolute;
+  z-index: -200;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gradientWhiteMask {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.7))
+;
+}
+
+.normalWhiteMask {
+  position: fixed;
+  top: 350px;
+  width: 100%;
+  height: calc(100% - 350px);
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1));
+}
+
+.normalFooterWhiteMask {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  height: 350px;
+  background-color: #fff
+}
+
+.headerContent {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+#particles-js{
+  position: fixed;
+  top: -20%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.headerView {
+  float: left;
+  height: 250px;
+}
+
+.appLogo {
+  position: absolute;
+  margin-top: 90px;
+  margin-left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-image: url(@logoUrl);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.appName {
+  position: absolute;
+  width: 100%;
+  margin-top: 200px;
+  text-align: center;
+}
+
+.heavyTitle {
+  color: black;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900
+}
+
+.boldTitle {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900
+}
+
+
+.icon {
+  float: left;
+  width: 50%;
+  border-color: @lightGreen
+}
+
+.separation {
+  float: left;
+  margin-top: -12px;
+  margin-left: calc(50% - 50px);
+  height: 3px;
+  width: 100px;
+  background-color: #000
+}
+
+.content {
+  float: left;
+  margin: 5px 0 15px 0;
+  width: 100%;
+}
+
+.featureTitle {
+  .boldTitle;
+  float: left;
+  margin: 5px 0 0 0;
+  width: 100%;
+}
+
+.paragraph {
+  margin: 5px 30px 6px 30px;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.attentionParagraph {
+  margin: 10px 30px 10px 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #2AB96C;
+  font-weight: 900
+}
+
+.featureBlock {
+  height: 150px;
+  padding: 35px 20px 0 20px
+}
+
+.featureElement {
+  float: left;
+  padding: 0 calc(25% - 55px) 0 calc(25% - 55px);
+  width: 110px;
+}
+
+.featureIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: @lightGreen
+}
+
+.featureTitle {
+  float: left;
+  margin-top: 10px;
+}
+
+footer {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.investorLogo {
+  float: left;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  border-radius: 60px;
+}
+
+/* -----这里是引用的资源图片----- */
+.safeIcon {
+  .featureIcon;
+  .addImage(60%, '@{iconCatalogUrl}safe_icon.png');
+}
+
+.speedyIcon {
+  .featureIcon;
+  .addImage(60%, '@{iconCatalogUrl}speedy_icon.png');
+}
+
+.SequoiaCapitalIcon {
+  .investorLogo;
+  .addImage(80%, '@{iconCatalogUrl}sequoia_capital_icon.png');
+}
+
+.TencentIcon {
+  .investorLogo;
+  .addImage(70%, '@{iconCatalogUrl}tencent_icon.png');
+}
+
+.SinovationVenturesIcon {
+  .investorLogo;
+  .addImage(65%, '@{iconCatalogUrl}sinovation_ventures_icon.png');
+}
+
+.ZhenFundIcon {
+  .investorLogo;
+  .addImage(65%, '@{iconCatalogUrl}zhen_fund_icon.png');
+}

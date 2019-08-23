@@ -1,0 +1,300 @@
+<div class = "content">
+  <div class = "page">
+    <div class = "home">
+      <div class = "left webLeft">
+        <h1 class = "introTitle"></h1>
+        <p class = "introSubtitle"></p>
+      </div>
+      <div class = "right">
+        <div class = "phoneImage"></div>
+      </div>
+    </div>
+    <div class = "wave"></div>
+  </div>
+  <div class = "page chainPage">
+    <div class = "template chainContentCell">
+      <div class = "top">
+        <h1 class = "introTitle centerText"></h1>
+        <p class = "introSubtitle centerText"></p>
+      </div>
+      <div class = "bottom"></div>
+    </div>
+  </div>
+  <script>
+    // Global Text Content
+    var homeTitle = setInternationalText(
+      'GoldStone - Multi-BlockChain Wallet for BTC/ETH/EOS/BCH/ETC/LTC/Tokens',
+      'GoldStone区块链钱包 - 支持 BTC/ETH/EOS/BCH/ETC/LTC和Token代币的多链钱包'
+      ),
+      chainsText = setInternationalText('Support For Almost All Major Block Chains', '支持全部主流区块链链'),
+      chainsTypeText = setInternationalText('Bitcoin, Litecoin, Bitcoin Cash, Ethereum, Ethereum Classic, EOS Chain.', '比特币、莱特币、比特币现金、以太坊、柚子和以太经典的主流链'),
+      bip44Text = setInternationalText('Strictly Follow\nThe BIP44 Rules', '严格遵循\nBIP44 规则'),
+      notificationText = setInternationalText('Immediate\nTransaction Notification', '即时的\n交易状态通知'),
+      multipleChain = setInternationalText('Simple\nManagement of\nMulti-Chain Assets', '简单\n管理你的多链资产'),
+      multipleChainDescription = setInternationalText('Safe, convenient decentralized digital currency wallet', '简单、便捷的管理多链下的去中心化资产')
+
+    $('.chainContentCell .top .introTitle').html(chainsText)
+    $('.chainContentCell .top .introSubtitle').html(chainsTypeText)
+    $('.left .introTitle').html(multipleChain)
+    $('.left .introSubtitle').html(multipleChainDescription)
+
+    setMetaTitle(homeTitle)
+    setDownloadButton()
+    addWave()
+    // Chains Info
+    $('.bottom').load('./component/card.html')
+    $('.chainPage').addClass('splitCellColor')
+    // 首页的循环内容结构体
+    var introTitles = [
+      bip44Text,
+      notificationText,
+      setInternationalText('Free Subscription to Exchange Real-Time Information', '免费订阅交易所实时信息'),
+      setInternationalText('Full Support For EOS Blockchain', '完整支持 EOS 区块链')
+    ]
+    var introSubtitles = [
+      setInternationalText(
+        'The public and private keys of different blockchains are generated strictly in accordance with the rules of BIP44. We firmly believe that convenience and privacy are equally important. We believe that BIP44 can provide such a possibility.',
+        '严格按照 BIP44 的规则生成不同区块链的公钥和私钥, 我们坚信, 便捷和隐私是同样重要的, 我们认为 BIP44 刚好可以提供这样的可能.'
+      ),
+      setInternationalText(
+        'It is well known that blockchains are decentralized. Helping your account to implement real-time transaction status notifications requires additional costs, which we think is necessary. So if you turn on notifications, you can enjoy transactions for free. Real-time notification of status.',
+        '众所周知区块链是去中心化的, 帮助您的账号的实现实时交易状态的通知需要付出额外的成本, 而我们认为这是很有必要的. 所以如果你开启通知选项, 便可以免费的享有交易状态的实时通知.'
+      ),
+      setInternationalText(
+        'We provide you with real-time data on trading information for custom trading pairs of over 20 major exchanges for free, including trade-to-price, K-line charts for different timeframes.',
+        '我们为您免费提供超过20种主流交易所的自定义交易对的交易信息的实时数据, 其中包括，交易对价格, 不同时间范围的 K线图。'
+      ),
+      setInternationalText(
+        'Complete support for EOS blockchain, including offline public key private key generation, registration of EOS Account Name, CPU, NET, RAM trading, EOS Token transfer and more.',
+        '完整的支持 EOS 区块链的全部功能, 包括账户名注册、带宽及内存交易、以及EOS 的公钥私钥生成逻辑.'
+      )
+    ]
+    var introPicture = [
+      'bip44.png',
+      'notification.png',
+      'intro_picture.png',
+      'intro_picture.png',
+      'intro_picture.png',
+      'intro_picture.png'
+    ]
+    var introPicture2x = [
+      'bip44@2x.png 2x, bip44@2x.png 3x',
+      'notification@2x.png 2x, notification@2x.png 3x',
+      'img/shopping_bag@2x.png 2x, img/shopping_bag@2x.png 3x',
+      'img/shopping_bag@2x.png 2x, img/shopping_bag@2x.png 3x',
+      'img/shopping_bag@2x.png 2x, img/shopping_bag@2x.png 3x',
+      'img/shopping_bag@2x.png 2x, img/shopping_bag@2x.png 3x'
+    ]
+
+    function getIntroPicture (index, is2xImage) {
+      var path
+      if (is2xImage === true) path = introPicture[index]
+      else path = introPicture2x[index]
+      return introPicturePath + path
+    }
+
+    var introPicturePath = './resources/images/'
+    for (var index = 0; index < 4; index++) {
+      $('.container .content').append(
+        '<div class="page" id=' + index + '>' +
+        '<div class = "template">' +
+        '<div class="circle"></div>' +
+        '<div class = "left webLeft">' +
+        '<h1 class = "introTitle">' + introTitles[index] + '</h1>' +
+        '<p class = "introSubtitle">' + introSubtitles[index] + '</p>' +
+        '</div>' +
+        '<div class = "right"><img class = "introPicture" src="' + getIntroPicture(index) + '" srcset="' + getIntroPicture(index, true) + '"></div>' +
+        '</div>' +
+        '</div>'
+      )
+
+      if (index % 2 === 1) {
+        var cell = $('#' + index + '').addClass('rightText')
+        cell.addClass('splitCellColor')
+        cell.addClass('rightText')
+        cell.children('.template').children('.right').css({ right: 'unset' })
+        cell.children('.template').children('.left').css({ right: 0 })
+      }
+
+      switch (index) {
+        case 0: {
+          var template = $('#0 .template')
+          template.css({ minHeight: 620 })
+          template.children('.left').append('<button class="moreDetail">MORE DETAILS</button>')
+          $('.moreDetail').click(function () {
+            loadMultipleWallet()
+          })
+          if (isMobile === false) $('#0 .right').css({ right: -80 })
+          break
+        }
+        case 1: {
+          $('#1 .template').css({ minHeight: 620 })
+          var imgContent = $('#1 .right')
+          if (isMobile === false) imgContent.addClass('notification')
+          else imgContent.addClass('mobileNotification')
+          imgContent.removeClass('right')
+          break
+        }
+        case 2: {
+          $('#2 .left').addClass('top centerText').removeClass('left webLeft')
+          $('#2 .right .introPicture').remove()
+          $('#2 .right').addClass('bottom').removeClass('right')
+          $('#2 .bottom').load('./component/exchangeLogos.html')
+          break
+        }
+
+        case 3: {
+          $('#3 .left').addClass('top centerText').removeClass('left webLeft')
+          $('#3 .right .introPicture').remove()
+          $('#3 .right').addClass('bottom').removeClass('right')
+          $('.bottom').append('<img src=\'./resources/images/eosPage.png\' srcset=\'./resources/images/eosPage@2x.png\' class=\'eosPage\'>')
+          break
+        }
+      }
+    }
+
+    function isWeChat () {
+      var ua = navigator.userAgent.toLowerCase()
+      return ua.toLowerCase().indexOf('micromessenger') >= 0
+    }
+
+    function setDownloadButton () {
+      var googlePlayUrl = 'https://play.google.com/store/apps/details?id=io.goldstone.blinnnk'
+      var appStoreUrl = 'https://itunes.apple.com/cn/app/id1422587812'
+      var introLeft = $('.home .left')
+      if (isMobile === true) {
+        if (checkBrowser().ios === true) {
+          introLeft.append('<button id = "apple">APP STORE</button>')
+        } else if (checkBrowser().android === true) {
+          introLeft.append('<button id = "google">GOOGLE PLAY</button>')
+          introLeft.append('<button id = "home">DOWNLOAD</button>')
+          $('button').css({ marginTop: 15 })
+          $('#home').click(function () {
+            if (isWeChat() === true) showDownloadAlert()
+            else getNewHomeVersionApk(function (url) {
+              location.href = url
+            })
+          })
+        } else {
+          introLeft.append('<button id = apple>APP STORE</button>')
+          introLeft.append('<button  id = "google">GOOGLE PLAY</button>')
+          $('button').css({ marginTop: 15 })
+        }
+      } else {
+        introLeft.append('<button id = apple>APP STORE</button>')
+        introLeft.append('<button  id = "google">GOOGLE PLAY</button>')
+        $('.home .left button').css({ marginRight: 20 })
+      }
+      $('#google').click(function () {
+        if (isWeChat() === true) showDownloadAlert()
+        else location.href = googlePlayUrl
+      })
+      $('#apple').click(function () {
+        if (isWeChat() === true) showDownloadAlert()
+        else location.href = appStoreUrl
+      })
+    }
+
+    function showDownloadAlert () {
+      $('.wrapper').append('<div class="browserAlertContainer"></div>')
+      $('.browserAlertContainer').load('./component/downloadAlert.html')
+    }
+
+    function getNewHomeVersionApk (hold) {
+      return $.get('https://demeter.goldstone.io/index/getNewVersion', function (data) {
+        hold(data.data.download_url)
+      })
+    }
+
+    // Mobile Detecting
+    if (isMobile === true) {
+      setMobileStyle()
+      scaleIntroTitle()
+    }
+
+    function setMobileStyle () {
+      $('.introTitle').addClass('centerText')
+      $('.introSubtitle').addClass('centerText mobileSubtitle')
+      $('.left').removeClass('webLeft').css({ marginTop: 60 })
+      $('.home .right').addClass('mobileRight')
+      $('button').addClass('mobileCenterButton')
+      $('.template .left').removeClass('mobileLeft')
+      $('.template .right img').addClass('mobilePageImage')
+      $('.phoneImage').addClass('mobilePhoneImage')
+      $('#0 .right img').removeClass('mobilePageImage').addClass('bip44Image')
+      $('.right').removeClass('right').addClass('fullLeft')
+    }
+
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  .page .wave {
+    margin-top: -100px;
+  }
+
+  .bottom {
+    text-align: center;
+    width: 100%;
+    float: left;
+  }
+
+  .mobileRight {
+    position: relative;
+    float: left;
+    margin-left: calc((100% - 360px) / 2);
+  }
+
+  .phoneImage {
+    width: 360px;
+    height: 540px;
+    float: left;
+    background-size: 150% 100%;
+    background-image: url('./resources/images/phone_home@2x.png');
+    background-position: -90px 0;
+    background-repeat: no-repeat;
+  }
+
+  .mobilePhoneImage {
+    transform: scale(0.9);
+  }
+
+  .bip44Image {
+    width: 120%;
+    height: 120%;
+    margin-left: -10%;
+    transform: scale(1);
+    margin-top: 30px;
+  }
+
+  .mobileCenterButton {
+    width: 260px;
+    margin-left: calc((100% - 260px) / 2);
+  }
+
+  .mobilePageImage {
+    width: 360px;
+    height: 360px;
+    margin-left: calc((100% - 360px) / 2);
+    transform: scale(0.75);
+  }
+
+  .notification {
+    position: absolute;
+    max-width: 500px;
+    width: 100vw;
+    bottom: -5px;
+    left: -80px;
+  }
+
+  .mobileNotification {
+    margin-left: calc((100% - 100vw) / 2);
+    margin-bottom: -3px;
+  }
+
+  .eosPage {
+    max-width: 600px;
+    width: 90%;
+    height: 90%;
+  }
+</style>

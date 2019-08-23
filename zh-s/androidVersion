@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Android版本</title>
+	<meta content="Android版本" name="description">
+
+	<meta name="keywords" content="GolStone, Wallet, ETH, Ethereum, Crypto Currency, Bitcoin, EOS, LTC, Blockchain">
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<!-- 禁用用户手动缩放手势 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- 设置webapp的icon -->
+	<link rel="apple-touch-icon-precomposed" href="../assets/logo.png"/>
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content=GoldStone">
+	<link rel="icon" sizes="192x192" href="../assets/touch/chrome-touch-icon.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="GoldStone">
+	<link rel="apple-touch-icon" href="../assets/touch/apple-touch-icon.png">
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="../assets/touch/ms-touch-icon.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
+	<!-- 设置CSS文件指向 -->
+	<link rel="stylesheet" href="../css/conditions.css" type="text/css" media="all">
+
+</head>
+
+<body class="cursorDefault disableDefaultAction">
+<div class="container">
+	<header>
+		<div class="appIcon">
+			<h2 class="appName">G O L D S T O N E</h2>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="headerBlock"></div>
+		<h1 class="headerTitle">Android</h1>
+
+		<div class="conditionBlock">
+			<h3 class="subtitle">最新版本: Beta 0.9.5</h3>
+			<p class="contentText">
+				更新日期: 2018 年 5月 30日
+			</p>
+			<h4 class="thirdOrderTitle">What's New:</h4>
+			<p class="contentText">
+				支持以太坊，包含主节点(Mainnet), 和三个测试节点（Ropsten, Kovan, Rinkeby）。
+			</p>
+			<p class="thirdOrderTitle">
+				钱包功能
+			</p>
+			<p class="contentText bulletContent">
+				• 支持 BIP32, BIP39, BIP44 标准
+			</p>
+			<p class="contentText bulletContent">
+				• 支持创建新账号
+			</p>
+			<p class="contentText bulletContent">
+				• 支持导入您已有的账号，支持方式：助记词导入 / Keystore导入 / 私钥导入
+			</p>
+			<p class="contentText bulletContent">
+				• 可以查询ETH以及所有ERC20 token资产余额.
+			</p>
+			<p class="contentText bulletContent">
+				• 可以接收与转出ETH以及所有ERC20 token.
+			</p>
+			<p class="contentText bulletContent">
+				• 可以导出已有的账户的私钥与Keystore.
+			</p>
+
+
+			<p class="thirdOrderTitle">
+				资产管理功能
+			</p>
+			<p class="contentText bulletContent">
+				• 可以查看钱包内的实时资产估值，支持USD / CNY / JPN / EUR / RUB 等数十种货币
+			</p>
+
+			<p class="contentText bulletContent">
+				• 可以订阅并查看您关心的token在各大交易所的实时价格
+			</p>
+
+			<p class="thirdOrderTitle">
+				支持观察钱包
+			</p>
+			<p class="contentText bulletContent">
+				• 在Goldstone中，支持以地址导入观察钱包
+			</p>
+			<p class="contentText bulletContent">
+				• 观察钱包的导入无需使用私钥 / 助记词 / Keystore，只需要使用地址，在不进行交易的时候使用观察钱包来查看实时余额与转账消息，更安全。
+			</p>
+
+			<p class="contentText bulletContent">
+				• 不过观察钱包不能转出资产，您需要导入私钥 / 助记词 / Keystore来进行交易.
+			</p>
+		</div>
+
+		<div class="conditionBlock">
+			<h3 class="subtitle">版本: Beta 0.8.5</h3>
+			<p class="contentText">
+				更新日期: 2018年 5月 16日
+			</p>
+			<p class="contentText">
+				发布了Ropsten网络上的Goldstone，wow，这是Goldstone的第一个版本哟.
+			</p>
+			      
+		</div>
+
+	</main>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<div class = "content">
+  <div class = "logo">
+    <img src = "./resources/images/logo.svg">
+    <span>GOLDSTONE</span>
+  </div>
+  <ul class = "menu">
+    <li class = "multipleChainButton unselected"></li>
+    <li class = "aboutUsButton unselected">About Us</li>
+    <li class = "blogButton unselected">Blog</li>
+  </ul>
+  <img class = "more disappear" src = "./resources/images/menu.svg">
+  <script>
+    setHeaderTitle ()
+    // 刷新的时候初始化选中样式, 根据 `Url `的值
+    updateHeaderSelectedStyle()
+    // Mobile 适配
+    var menu = $('.menu')
+    var more = $('.more')
+    if (isMobile === true) {
+      menu.addClass('disappear')
+      more.removeClass('disappear')
+    } else {
+      menu.removeClass('disappear')
+      more.addClass('disappear')
+    }
+
+    function setSelected (className) {
+      $(className).addClass('selected')
+      $(className).removeClass('unselected')
+    }
+
+    function recoverySelectedStatus () {
+      $('header ul').children('li').each(function() {
+        $(this).removeClass('selected')
+        $(this).addClass('unselected')
+      })
+    }
+
+    $('.aboutUsButton').click(function() {
+      loadAboutUs()
+      updateHeaderSelectedStyle()
+    })
+
+    $('.multipleChainButton').click(function() {
+      loadMultipleWallet()
+      updateHeaderSelectedStyle()
+    })
+
+    $('.logo').click(function() {
+      recoverySelectedStatus()
+      loadHome()
+    })
+
+    $('.blogButton').click(function() {
+      location.href = 'https://medium.com/@goldstoneio'
+    })
+
+    more.click(function() {
+      $('.wrapper').append('<div class=\'menuContainer splitCellColor\'></div>')
+      $('.menuContainer').load('./component/menu.html')
+    })
+
+    function updateHeaderSelectedStyle () {
+      var url = window.location.href
+      if (url.indexOf('#') !== -1) {
+        url = url.substring(url.indexOf('#') + 1)
+      }
+      switch(url) {
+        case 'aboutUs': {
+          recoverySelectedStatus()
+          setSelected('.aboutUsButton')
+          break
+        }
+        case 'multipleChainWallet': {
+          recoverySelectedStatus()
+          setSelected('.multipleChainButton')
+          break
+        }
+        case 'privacyPolicy': {
+          recoverySelectedStatus()
+          break
+        }
+        case 'joinUs': {
+          recoverySelectedStatus()
+          break
+        }
+      }
+    }
+
+    window.onscroll = function() {
+      if ($(window).scrollTop() > 30) {
+        $('header').css({ backgroundColor: '#1c466e' })
+      } else {
+        $('header').css({ backgroundColor: 'transparent' })
+      }
+    }
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  .more {
+    width: 28px;
+    height: 28px;
+    float: right;
+    margin-top: 31px;
+  }
+</style>

@@ -1,0 +1,184 @@
+.navigationTitle {
+  font-size: 18px;
+  font-weight: normal;
+}
+.bigTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+.heading1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.heading2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.heading3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.contentText {
+  font-size: 14px;
+  font-weight: normal;
+}
+.signature {
+  font-size: 14px;
+  font-weight: normal;
+}
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, rgba(14, 108, 140, 0.6));
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, rgba(18, 39, 80, 0.1));
+}
+.fillGreen {
+  background-color: #2AB96C;
+}
+.fillWhite {
+  background-color: white;
+}
+.fillYellow {
+  background-color: #ffeb00;
+}
+.fillCyan {
+  background-color: #8DE2C0;
+}
+.fillBlue {
+  background-color: #00B2FF;
+}
+.fillOrange {
+  background-color: #E75E42;
+}
+.fillDarkBlue {
+  background-color: #122750;
+}
+.fillDarkGreen {
+  background-color: #0e6c8c;
+}
+/* 灰色 */
+.fillBackgroundGray {
+  background-color: #F4F7FA;
+}
+.fillLightGray {
+  background-color: #B9BFC6;
+}
+/* 字体颜色 */
+.fontWhite {
+  color: white;
+}
+.fontGray {
+  color: rgba(0, 0, 0, 0.4);
+}
+.fontBlack {
+  color: #333F50;
+}
+.fontOrange {
+  color: #E75E42;
+}
+.fontGreen {
+  color: #2AB96C;
+}
+.fontWhite {
+  color: white;
+}
+.fontYellow {
+  color: #ffeb00;
+}
+.fontCyan {
+  color: #8DE2C0;
+}
+.fontBlue {
+  color: #00B2FF;
+}
+/* 渐变色 */
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, #114B6D);
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, #122750);
+}
+.headerView {
+  height: 5px;
+  width: 100%;
+}
+.container {
+  float: left;
+  padding: 30px 20px 60px 20px;
+  width: calc(100% - 40px);
+}
+.block {
+  float: left;
+  /* margin: 20px 0 20px 0; */
+  padding: 20px 2px 20px 2px;
+  width: calc(100% - 4px);
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content {
+  width: calc(100% - 20px);
+  height: auto;
+  padding: 30px 10px 5px 10px;
+}
+.contentTitle {
+  float: left;
+  width: calc(100% - 30px);
+  font-size: 18px;
+  font-weight: bold;
+}
+.label {
+  float: left;
+  width: 100%;
+  margin: 10px 0px 5px 0px;
+}
+.link {
+  font-size: 16px;
+  font-weight: bold;
+}
+.paragraph {
+  float: left;
+  margin: 12px 0 4px 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+}
+.block.tips {
+  float: left;
+  margin: 12px 0 4px 0;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: rgba(37, 143, 48, 0.07);
+  border-radius: 4px;
+}
+.formula {
+  width: 260px;
+  margin: 0px calc(50% - 140px) 0px calc(50% - 140px);
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgba(37, 143, 48, 0.07);
+  border-radius: 4px;
+}
+.dot {
+  float: left;
+  margin: 8px 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+.dot.en {
+  margin: 2px 8px;
+}
+.dot.green {
+  background-color: #2AB96C;
+}
+.dot.cyan {
+  background-color: #8DE2C0;
+}
+.dot.blue {
+  background-color: #00B2FF;
+}
+.dot.yellow {
+  background-color: #ffeb00;
+}

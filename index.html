@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/html">
+<head lang = "en">
+  <title>GoldStone - Multi-BlockChain Wallet for BTC/ETH/EOS/BCH/ETC/LTC/Tokens</title>
+  <meta name="robots" content="index, follow" />
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name = "GoldStone BlockChain Wallet - Support BTC/ETH/EOS/BCH/ETC/LTC/Tokens"
+        content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name = "keywords" content = "BTC,ETH, EOS, BCH, ETC, LTC, ERC20 Tokens, Bitcoin Cash, Bitcoin, Ethereum Classic, Ethereum, Cryptocurrency, Blockchain Wallet"/>
+  <link rel=”alternate” href=”https://www.goldstone.io” hreflang=”zh” />
+  <link rel=”alternate” href=”https://www.goldstone.io” hreflang=”en” />
+  <link rel = "stylesheet" type = "text/css" href = "module/main/Main.css">
+  <link rel = "shortcut icon" type = "image/png" href = "./resources/images/icon.png"/>
+  <link rel = "stylesheet/less" href = "module/main/MainLess.less" type = "text/css" data-for = "result">
+  <script src = "./resources/thirdParty/less.min.js"></script>
+  <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    var languageCode,
+      languageCookeKey = 'languageCode'
+
+    function getLanguageCodeInCookies (hold) {
+      var cookieData = document.cookie.split(';')
+      var dataCount = cookieData.length
+      cookieData.find(
+        function (value) {
+          dataCount -= 1
+          var cookieValue = value.toString()
+          var key = cookieValue.substring(0, cookieValue.indexOf('=')).replace(' ', '')
+          if (key === languageCookeKey) {
+            if (typeof hold === 'function') {
+              hold(cookieValue.substring(cookieValue.indexOf('=') + 1, cookieValue.length))
+              return
+            }
+          }
+          if (dataCount <= 0) {
+            hold(null)
+          }
+        }
+      )
+    }
+
+    function setLanguageCode (code) {
+      if (typeof code !== 'undefined') {
+        document.cookie = 'languageCode=' + code + ''
+      }
+    }
+
+    // 触发检测阈值只开启一次节省性能增加这个阈值便捷的标记
+    var isDetecting = false
+    // 静态检查
+    var isMobile = $(window).width() < 640
+    detectingAndRefresh()
+    scaleIntroTitle()
+    // 实时动态检测窗口变换判断是否是手机状态
+    $(window).on('resize', function () {
+      // 实时刷新 `Canvas` 上的 `Wave` 尺寸
+      addWave()
+      scaleIntroTitle()
+      isMobile = $(window).width() < 640
+      detectingAndRefresh()
+    })
+
+    function detectingAndRefresh () {
+      if (isMobile === true && isDetecting === true) {
+        refreshData()
+        isDetecting = false
+      } else if (isMobile === false && isDetecting === false) {
+        refreshData()
+        isDetecting = true
+      }
+    }
+
+    // 用户拖动窗口的时候字体随着窗体大小而动态调整
+    function scaleIntroTitle () {
+      var introTitle = $('.introTitle')
+      var introSubtitle = $('.introSubtitle')
+      var cellTitle = $('.cell h1')
+      var cellSubtitle = $('.cell p')
+      var windowWidth = $(window).width()
+      var ratio
+      if (windowWidth <= 360) ratio = 1
+      else {
+        ratio = windowWidth / 420
+        if (ratio > 1.5) ratio = 1.5
+      }
+      cellTitle.css({ fontSize: ratio * 28 })
+      introTitle.css({ fontSize: ratio * 32 })
+      if (ratio > 1) ratio = 1
+      introSubtitle.css({ fontSize: ratio * 16 })
+      cellSubtitle.css({ fontSize: ratio * 16 })
+    }
+
+    function refreshData () {
+      // 获取语言设置
+      getLanguageCodeInCookies(function (data) {
+        if (data === null) {
+          languageCode = 0
+        } else {
+          languageCode = parseInt(data)
+        }
+        checkURLAdnLoadPage()
+      })
+    }
+
+    function checkURLAdnLoadPage () {
+      // 分析当前界面
+      var url = window.location.href
+      if (url.indexOf('#') !== -1) {
+        url = url.substring(url.indexOf('#') + 1)
+      }
+      $('header').load('./component/header.html')
+      switch (url) {
+        case 'aboutUs': {
+          loadAboutUs()
+          break
+        }
+        case 'joinUs': {
+          loadJoinUs()
+          break
+        }
+        case 'multipleChainWallet': {
+          loadMultipleWallet()
+          break
+        }
+        case 'home': {
+          loadHome()
+          break
+        }
+        case 'privacyPolicy': {
+          loadPrivacyPolicy()
+          break
+        }
+        case 'term': {
+          loadTerm()
+          break
+        }
+        case 'blockChainTools': {
+          loadBlockChainTools()
+          break
+        }
+        default: {
+          loadHome()
+        }
+      }
+      $('.footer').load('./component/footer.html')
+    }
+
+    function loadAboutUs () {
+      document.location.hash = 'aboutUs'
+      $('.container').load('./module/aboutUs.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function loadJoinUs () {
+      document.location.hash = 'joinUs'
+      $('.container').load('./module/joinUs.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function loadMultipleWallet () {
+      document.location.hash = 'multipleChainWallet'
+      $('.container').load('./module/multipleWallet.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function loadHome () {
+      document.location.hash = 'home'
+      $('.container').load('./module/home.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function loadBlockChainTools () {
+      document.location.hash = 'blockChainTools'
+      $('.container').load('./module/blockChainTools.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function loadPrivacyPolicy () {
+      document.location.hash = 'privacyPolicy'
+      $('.container').load('./module/privacyPolicy.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function loadTerm () {
+      document.location.hash = 'term'
+      $('.container').load('./module/term.html')
+      $('body,html').animate({ scrollTop: 0 }, 300)
+    }
+
+    function addWave () {
+      var wave = $('.wave')
+      // 如果有正在执行的动画清空 `Interval` 事件
+      if (typeof animation !== 'undefined') {
+        clearInterval(animation)
+      }
+      wave.load('./component/wave.html')
+    }
+
+    function checkBrowser () {
+      var browser = navigator.userAgent
+      return { //移动终端浏览器版本信息
+        trident: browser.indexOf('Trident') > -1, //IE内核
+        presto: browser.indexOf('Presto') > -1, // opera内核
+        webKit: browser.indexOf('AppleWebKit') > -1, // 苹果、谷歌内核
+        gecko: browser.indexOf('Gecko') > -1 && browser.indexOf('KHTML') === -1, // 火狐内核
+        mobile: !!browser.match(/AppleWebKit.*Mobile.*/) || !!browser.match(/AppleWebKit/), // 是否为移动终端
+        ios: !!browser.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: browser.indexOf('Android') > -1 || browser.indexOf('Linux') > -1, // android终端或者uc浏览器
+        iPhone: browser.indexOf('iPhone') > -1 || browser.indexOf('Mac') > -1, // 是否为iPhone或者QQHD浏览器
+        iPad: browser.indexOf('iPad') > -1, // 是否iPad
+        webApp: browser.indexOf('Safari') === -1 // 是否web应该程序，没有头部与底部
+      }
+    }
+
+    function setInternationalText (english, chinese) {
+      if (languageCode === 0) return english
+      else return chinese
+    }
+
+    function setHeaderTitle () {
+      $('.homeButton').html(setInternationalText('Home', '首页'))
+      $('.multipleChainButton').html(setInternationalText('Multiple Chain Wallet', '多链区块链钱包'))
+      $('.aboutUsButton').html(setInternationalText('About Us', '关于我们'))
+      $('.blogButton').html(setInternationalText('Our Blog', '博客'))
+      $('.joinUsButton').html(setInternationalText('Join Us', '加入我们'))
+    }
+
+    function setMetaTitle (title) {
+      document.title = title
+    }
+
+  </script>
+</head>
+<body>
+<header></header>
+<div class = "wrapper">
+  <div class = "container"></div>
+  <div class = "footer"></div>
+</div>
+<script>
+  refreshData()
+</script>
+</body>
+</html>

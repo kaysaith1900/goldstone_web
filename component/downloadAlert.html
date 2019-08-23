@@ -1,0 +1,29 @@
+<div class = "content splitCellColor">
+  <img src="./resources/images/arrowButton.svg">
+  <p>Please open your browser to download GoldStone application</p>
+  <script>
+    $('.browserAlertContainer').click(function() {
+      $('.browserAlertContainer').fadeOut(300, function(){ $('.browserAlertContainer').remove(); })
+    })
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  .browserAlertContainer img {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 70px;
+    cursor: pointer;
+  }
+  .browserAlertContainer p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 30px;
+    float: left;
+    text-align: center;
+  }
+</style>

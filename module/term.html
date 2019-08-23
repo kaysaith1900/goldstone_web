@@ -1,0 +1,179 @@
+<div class="content">
+  <div class="termContainer centerContentContainer flexBox multiColumns">
+    <div id="userTermsTitle" class="introTitle centerText"></div>
+    <div id="userTermsSubtitle" class="introSubtitle centerText"></div>
+    <div id="userTermsContent" class="termContent"></div>
+  </div>
+</div>
+
+<script>
+  // Global Text Content
+  var userTerms
+  if (languageCode === 0) {
+    userTerms = {
+      title: 'Terms & Conditions of GoldStone',
+      footer: 'Latest update: May 15, 2018',
+      sections: [
+        {
+          title: 'Wallets and Assets',
+          lines: ['When you create or import a wallet in GoldStone, the private key keep in local, and we <span class ="attentionText">NEVER</span> upload any forms of your private keys or mnemonics or keystores.',
+            'Please make sure you backup them well and safe, the private keys or mnemonics or keystores will not get recovered from GoldStone server.',
+            'Assets price was supported by 3rd party website, it could be used as a reference. Please notice that the true value of your assets is based on your specific trading behavior.'
+          ]
+        },
+        {
+          title: 'Intellectual Property',
+          lines: ['The Service and its original content, features and functionality are and will remain the exclusive property of GoldStone and its licensors. ' +
+          'The Service is protected by copyright, trademark, and other laws of both the Belgium and foreign countries. ' +
+          'Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of GoldStone.'
+          ]
+        },
+        {
+          title: 'Links To Other Web Sites',
+          lines: ['Our Service may contain links to third-party web sites or services that are not owned or controlled by GoldStone.',
+            'GoldStone has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services.' +
+            ' You further acknowledge and agree that GoldStone shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged ' +
+            'to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such websites or services.',
+            'We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.',
+          
+          ]
+        },
+        {
+          title: 'Termination',
+          lines: ['We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.',
+            'Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service.',
+          
+          ]
+        },
+        {
+          title: 'Limitation Of Liability',
+          lines: ['In no event shall GoldStone, nor its directors, employees, partners, agents, suppliers, or affiliates, ' +
+          'be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, ' +
+          'loss of profits, data, use, goodwill, or other intangible losses, resulting from ',
+            '(i) your access to or use of or inability to access or use the Service; ',
+            '(ii) any conduct or content of any third party on the Service; ',
+            '(iii) any content obtained from the Service; ',
+            'and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.',
+          ]
+        },
+        {
+          title: 'Disclaimer',
+          lines: ['Your use of the Service is at your sole risk. The Service is provided on an"AS IS" and"AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.',
+            'GoldStone its subsidiaries, affiliates, and its licensors do not warrant that ',
+            'a) the Service will function uninterrupted, secure or available at any particular time or location; ',
+            'b) any errors or defects will be corrected; ',
+            'c) the Service is free of viruses or other harmful components; ',
+            'or d) the results of using the Service will meet your requirements.']
+        },
+        {
+          title: 'Changes',
+          lines: ['We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 15 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.',
+            'By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.'
+          ]
+        }
+      ]
+    }
+  } else {
+    userTerms = {
+      title: 'GoldStone 用户协议',
+      footer: '最新更新：2018年5月15日',
+      sections: [
+        {
+          title: '钱包与资产',
+          lines: ['当您在GoldStone中创建或导入钱包时，私钥保存在本地，并且我们<span class ="attentionText">从不</span>上传任何形式的私钥或助记词或密钥库。',
+            '因为Goldstone不在云端存储您的这些数据，因此也<span class ="attentionText">无法从GoldStone服务器恢复</span>，请确保将您的' +
+            '<span class ="attentionText">助记词</span>,<span class ="attentionText">私钥</span>,<span class ="attentionText">Keystore</span>妥善备份。',
+            '资产价格由第三方网站支持，可以作为参考。请注意，您资产的真实价值取决于您的具体交易行为。'
+          ]
+        },
+        {
+          title: '知识产权',
+          lines: ['本服务及其原始内容，功能和功能现在仍将是GoldStone及其许可人的专有财产。本服务受比利时和外国的版权，商标和其他法律保护。未经金石事先书面同意，我们的商标和商业外观不得用于任何产品或服务。']
+        },
+        {
+          title: '其他网站服务或链接',
+          lines: ['我们的服务可能包含指向非GoldStone拥有或控制的第三方网站或服务的链接。',
+            'GoldStone无法控制任何第三方网站或服务的内容、隐私政策或惯例，也不承担任何责任。您需要进一步承认并同意，对于经由第三方商品或服务而导致直接或间接产生的任何损害或损失，GoldStone不承担责任。',
+            '我们强烈建议您阅读您访问的任何第三方网站或服务的条款和条件以及隐私政策。'
+          ]
+        },
+        {
+          title: '服务终止',
+          lines: ['在包括但不限于用户违反条款的情况下，我们可能会以任何理由立即终止或暂停您对Goldstone服务的使用，恕不另行通知或承担责任。',
+            '服务终止后，您使用本服务的权利将立即停止。如果您想主动终止，您可以停止使用本服务。'
+          ]
+        },
+        {
+          title: '责任限制',
+          lines: ['在任何情况下，GoldStone及其董事，雇员，合作伙伴，代理商，供应商或关联公司均不对任何间接的，附带的，特殊的，相应的或惩罚性的损害负责，包括但不限于利润损失，数据，使用，商誉，或因以下原因导致的其他无形损失：',
+            '（i）您访问或使用或无法访问或使用本服务',
+            '（ii）服务上任何第三方的行为或内容',
+            '（iii）从服务中获得的任何内容;',
+            '（iv）以保修，合同，侵权（包括疏忽）或任何其他法律理论为依据，无论我们是否已被告知此类损害的可能性；',
+            '（iv）未经授权访问，使用或更改您的传输或内容如果发现这里提出的补救措施没有达到其基本目的。'
+          ]
+        },
+        {
+          title: '免责声明',
+          lines: ['您使用本服务需自担风险。该服务按“原样”和“可用”的基础提供。本服务不提供任何明示或暗示的担保，包括但不限于对适销性，适用于特定目的，不侵权或履行过程的暗示担保。',
+            'GoldStone其子公司，附属公司及其许可人不保证：a）本服务将在任何特定时间或地点不间断，安全或可用; b）任何错误或缺陷将被纠正; c）本服务不含病毒或其他有害成分;或d）使用本服务的结果将符合您的要求。'
+          ]
+        },
+        {
+          title: '变更',
+          lines: ['我们保留随时自行决定修改或替换这些条款的权利。如果修订是重要的，我们将尝试在任何新条款生效之前提供至少15天的通知。重大变更的构成将由我们自行决定。\n',
+            '在修改生效后，如果继续访问或使用我们的服务，您同意受修订条款的约束。如果您不同意新条款，请停止使用本服务。\n'
+          ]
+        }
+      ]
+    }
+  }
+  if (typeof userTerms.title !== 'undefined') {
+    $("#userTermsTitle").html(userTerms.title)
+  }
+  
+  if (typeof userTerms.sections !== 'undefined') {
+    
+    for (var index in userTerms.sections) {
+      var section = userTerms.sections[index]
+      
+      if (typeof section.title !== 'undefined') {
+        $("#userTermsContent").append(
+          '<h1 class="termHeading1">' + section.title + '</h1>'
+        )
+      }
+      if (typeof section.lines !== 'undefined') {
+        for (var lineIndex in section.lines) {
+          $("#userTermsContent").append(
+            '<h1 class="termLine">' + section.lines[lineIndex] + '</h1>'
+          )
+        }
+      }
+      
+      if (typeof section.subSections !== 'undefined') {
+        for (var subSectionIndex in section.subSections) {
+          var subsection = section.subSections[subSectionIndex]
+          if (subsection.title.length > 0) {
+            $("#userTermsContent").append(
+              '<h1 class="termHeading2">' + subsection.title + '</h1>'
+            )
+          }
+          if (subsection.lines.length > 0) {
+            for (var subLineIndex in subsection.lines) {
+              $("#userTermsContent").append(
+                '<h1 class="termLine">' + subsection.lines[subLineIndex] + '</h1>'
+              )
+            }
+          }
+        }
+      }
+    }
+  }
+  if (typeof userTerms.footer !== 'undefined') {
+    $("#userTermsSubtitle").append('<div class="termFooter">' + userTerms.footer + '</div>')
+  }
+  if (isMobile === true) {
+    scaleIntroTitle()
+  }
+</script>
+<style type="text/css" media="screen"></style>

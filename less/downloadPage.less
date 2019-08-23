@@ -1,0 +1,225 @@
+@import "colors";
+@import "aboutUs";
+@import "utils";
+
+//图片资源根路径
+@iconCatalogUrl: '../assets/icon/';
+
+@androidIcon: '@{iconCatalogUrl}android_icon.png';
+//@androidIcon: '@{iconCatalogUrl}android_icon.png';
+@googlePlayIcon: '@{iconCatalogUrl}play_icon.png';
+
+@elegantIcon: '@{iconCatalogUrl}elegant_icon.png';
+@easyIcon: '@{iconCatalogUrl}easy_icon.png';
+@observeIcon: '@{iconCatalogUrl}market_icon.png';
+@fingerIcon: '@{iconCatalogUrl}finger_icon.png';
+@teamIcon: '@{iconCatalogUrl}blink_icon.png';
+@emailIcon: '@{iconCatalogUrl}contact_icon.png';
+
+
+
+.downloadButtonBox {
+  .flexContainerWrap;
+  float: left;
+  width: 90%;
+  height: auto;
+  margin: 5px 5%;
+}
+
+.getAppButton {
+  .cursorPointer;
+  float: left;
+  width: 140px;
+  height: 36pt;
+  padding: 0 0 0 16pt;
+  border-radius: 4px;
+  margin: 10pt 5pt 0 5pt;
+  text-align: center;
+  font-weight: bold;
+  &:hover{margin-top: 7px; margin-bottom: 9px}
+  &:active{margin-top: 9px; margin-bottom: 7px}
+}
+
+.googlePlayButton {
+  .getAppButton;
+  background-color: black;
+}
+
+.getAPKButton {
+  .getAppButton;
+  background-color: @green;
+}
+
+.buttonSubText {
+  float: left;
+  width: 100%;
+  font-size: 10pt;
+  line-height: 10pt;
+  margin: 6pt 0 0 0;
+  font-weight: normal;
+  color: fade(white, 60%);
+}
+
+.buttonSubText.zh {
+  font-size: 8pt;
+  line-height: 8pt;
+  margin-bottom: 2px;
+}
+
+.buttonText {
+  float: left;
+  margin: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14pt;
+  line-height: 14pt;
+   .fontWhite;
+}
+
+.downloadButton {
+  float: left;
+  margin: 40px calc(50% - 85px);
+  width: 170px;
+  height: auto;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  outline: 0;
+}
+
+.downloadMainButton {
+  margin: 0;
+  background-color: @green;
+  &:hover{margin-top: 1px;}
+  &:active{margin-top: 2px;}
+}
+
+.downloadButtonTitle {
+  font-size: 18px;
+  margin-left: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+
+.downloadButtonTitle.ascii {
+  margin-top: 17px;
+}
+
+.downloadButtonTitle.unicode {
+  margin-top: 12px;
+}
+
+.ButtonShadow {
+  position: absolute;
+  z-index: -20;
+  margin: 0;
+  background-color: fade(white, 10%);
+}
+
+.versionDescription {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.smallTitle {
+  margin: 0 30px 0 30px;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  font-weight: 700
+}
+
+.singleFeatureElement {
+  float: left;
+  padding: 0 calc(50% - 55px);
+  width: 110px;
+}
+
+.getDownloadIcon {
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 55px;
+  border-width: 2px;
+  border-color: black;
+}
+
+.getDownloadText {
+  margin: 0 30px 0 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #2AB96C;
+  &:active{color: @blue};
+  &:hover {color: @blue}
+}
+
+.footerText {
+  margin: 0 30px 0 30px;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+
+.footerElement {
+  float: left;
+  margin: 0 calc(50% - 50px) 0 calc(50% - 50px);
+  width: 100px;
+}
+
+.footerIcon {
+  height: 60px;
+  margin: 20px;
+  border-radius: 100px;
+  background-color: black;
+}
+
+
+/* -----这里是引用的资源图片----- */
+
+.buttonIcon {
+  position: absolute;
+  margin:  8pt -8pt;
+  width: 20pt;
+  height: 20pt;
+}
+
+.androidIcon {
+  .buttonIcon;
+  .addImage(100%, @androidIcon);
+}
+
+.googlePlayIcon {
+  .buttonIcon;
+  .addImage(100%, @googlePlayIcon);
+}
+
+.elegantIcon {
+  .featureIcon;
+  .addImage(60%, @elegantIcon);
+}
+
+.easyIcon {
+  .featureIcon;
+  .addImage(55%, @easyIcon);
+}
+
+.observeIcon {
+  .featureIcon;
+  .addImage(50%, @observeIcon);
+}
+
+.fingerIcon {
+  .getDownloadIcon;
+  .addImage(50%, @fingerIcon);
+}
+
+.teamIcon {
+  .footerIcon;
+  .addImage(60%, @teamIcon);
+}
+
+.emailIcon {
+  .footerIcon;
+  .addImage(40%, @emailIcon);
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="207px" height="76px" viewBox="0 0 207 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>bloks</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bloks">
+            <text id="Bloks.io" font-family="Lato-Bold, Lato" font-size="36" font-weight="bold" letter-spacing="-1.28571439" fill="#304132">
+                <tspan x="77" y="51">Bloks.io</tspan>
+            </text>
+            <g id="tool/bloksIcon" transform="translate(4.000000, 7.000000)">
+                <g id="Group-6" stroke-width="1" fill-rule="evenodd" transform="translate(7.680000, 3.840000)">
+                    <g id="bloks"></g>
+                </g>
+                <path d="M32.5268823,18.5879476 L43.7383478,25.1416594 L32.5738153,31.6674236 L21.3623499,25.1137118 L32.5268823,18.5879476 Z M33.6063413,46.6641048 L33.6063413,33.6936245 L44.804003,27.1455022 L44.804003,40.1187773 L33.6063413,46.6641048 Z M20.2497617,40.1187773 L20.2497617,27.089607 L31.3563181,33.5846288 L31.3563181,46.6110044 L20.2497617,40.1187773 Z M32.5268823,16.1676856 L19.2917763,23.9035808 L8.91130106,17.8361572 L32.5268823,4.03283843 L56.1893966,17.8641048 L45.8089213,23.9315284 L32.5268823,16.1676856 Z M18.1791882,25.879476 L18.1791882,41.3261135 L31.3563181,49.0312664 L31.3563181,61.1661135 L7.79595212,47.3935371 L7.79595212,19.8148472 L18.1791882,25.879476 Z M46.8745765,25.9353712 L57.2578125,19.8707424 L57.2578125,47.3935371 L33.6063413,61.219214 L33.6063413,49.0843668 L46.8745765,41.3261135 L46.8745765,25.9353712 Z" id="Combined-Shape" fill="#0A4BA4" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

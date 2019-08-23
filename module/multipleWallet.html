@@ -1,0 +1,142 @@
+<div class = "content">
+  <div class = "joinUsIntro">
+    <div class = "intro">
+      <div class = "top"><h1 class = "introTitle centerText"></h1>
+        <p class = "introSubtitle centerText"></p></div>
+      <div class = "bottom"></div>
+    </div>
+  </div>
+  <div class = "wave"></div>
+</div>
+<script>
+  var multipleChainTitle = setInternationalText('One Identity, Multiple Blockchain Accounts', '一个身份\n多个区块链账户')
+  var multipleChainDescription = setInternationalText(
+    'Each chain has its own unique mission. They are incompatible. If your assets are distributed across different blockchains, GoldStone can help you manage them with a convenient and secure Mnemonic.',
+    '每一条链都有自己的独有的使命, 他们是不兼容的, 如果你的资产分布在不同的区块链上, 那么GoldStone 可以帮助你使用一份 Mnemonic 便捷的安全的管理它们.'
+  )
+  $('.bottom').load('./component/circle.html')
+  $('.right').load('./component/uicard.html')
+  $('.joinUsIntro .intro .top .introTitle').html(multipleChainTitle)
+  $('.joinUsIntro .intro .top .introSubtitle').html(multipleChainDescription)
+  var titles = [
+    setInternationalText('One Mnemonic\nUnlimited Addresses', '一份助记词\n无限地址'),
+    setInternationalText('Transaction History\nRecord List', '历史账单'),
+    setInternationalText(
+      'Support All Tokens\nBelow EOS And Ethereum',
+      '支持 Ethereum 和 EOS 下所有 Token'
+    )
+  ]
+  var subtitles = [
+    setInternationalText(
+      'BIP44 provides the perfect public key private key generation logic to help you generate and manage countless public key private keys with a single Mnemonic. This skill guarantees your privacy and provides convenience.',
+      'BIP44 提供了完美的公钥私钥生成逻辑, 帮助你用一份 Mnemonic 生成和管理无数的公钥私钥. 这技能保障你的隐私又提供了便捷.'
+    ),
+    setInternationalText(
+      'We support exporting your past transaction history from the chain and transforming the obscure JSON into an easy-to-read UI interface. It is extremely easy to view historical bills.',
+      '我们支持从链上导出你的既往交易记录, 并且将晦涩难懂的 JSON 转化成易读美观的 UI 界面. 查看历史账单变得异常容易. '
+    ),
+    setInternationalText(
+      'GoldStone also supports Tokens produced by smart contracts, including Token\'s information queries, billing records, and transactions.',
+      'GoldStone 同样支持由智能合约生产的 Token, 包括 Token 的信息查询, 账单记录, 以及交易.'
+    )
+  ]
+  for (var index = 0; index < 3; index++) {
+    $('.container .content').append(
+      '<div class = "multipleIntro" id = ' + index + '>' +
+      '    <div class = "intro">' +
+      '      <div class = "left webLeft"><h1 class = "introTitle">' + titles[index] + '</h1><p class = "introSubtitle">' + subtitles[index] + '</p></div>' +
+      '      <div class = "right"></div>' +
+      '    </div>' +
+      '  </div>'
+    )
+
+    var cellID = '#' + index + ''
+    if (index % 2 === 0) {
+      $(cellID).addClass('splitCellColor')
+    }
+
+    switch(index) {
+      case 0: {
+        $('#0 .right').load('./component/uicard.html')
+        break
+      }
+      case 1: {
+        $('#1 .right').load('./component/transactionCard.html')
+        break
+      }
+      case 2: {
+        $('#2 .right').load('./component/tokenManagerCard.html')
+        break
+      }
+    }
+  }
+
+  // Mobile Detecting
+  if (isMobile === true) {
+    scaleIntroTitle()
+    setMobileStyle()
+  } else {
+    // 非手机版本的时候调整一下样式
+    $('.multipleIntro .intro .right').css({ marginRight: 100 })
+  }
+  addWave()
+
+  function setMobileStyle () {
+    $('.multipleIntro .intro .left').removeClass('webLeft').addClass('mobileLeft')
+    $('.joinUsIntro .intro .top').css({ marginTop: 80 })
+    $('.joinUsIntro .intro .bottom').addClass('circleScale')
+    $('.multipleIntro .intro .left .introTitle').addClass('centerText')
+    $('.multipleIntro .intro .left .introSubtitle').addClass('centerText')
+    $('.multipleIntro .intro .right').addClass('mobileRight').removeClass('right')
+  }
+
+</script>
+
+<style type = "text/css" media = "screen">
+
+  .joinUsIntro .intro {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  .joinUsIntro .intro .top {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .circleScale {
+    transform: scale(0.8);
+    margin-top: -40px;
+  }
+
+  .multipleIntro .intro {
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 50px 0;
+  }
+
+  .mobileLeft {
+    position: relative;
+    transform: none;
+    top: 0;
+  }
+
+  .mobileRight {
+    float: left;
+    margin-left: calc((100% - 300px) / 2);
+    position: relative;
+    top: 0;
+    margin-top: 50px;
+  }
+
+  .multipleIntro {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+</style>

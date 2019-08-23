@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>用戶條款</title>
+  <meta charset="utf-8">
+  <meta content ="GoldStone Wallet - Terms & Conditions" name ="description">
+
+  <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 禁用用户手动缩放手势 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <!-- 设置webapp的icon -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/logo.png" />
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Add to home screen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content=GoldStone ">
+  <link rel ="icon " sizes ="192x192 " href ="../assets/touch/chrome-touch-icon.png ">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name ="apple-mobile-web-app-capable " content ="yes ">
+  <meta name ="apple-mobile-web-app-status-bar-style " content ="black-translucent ">
+  <meta name ="apple-mobile-web-app-title " content ="GoldStone ">
+  <link rel ="apple-touch-icon " href ="../assets/touch/apple-touch-icon.png ">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name ="msapplication-TileImage " content ="../assets/touch/ms-touch-icon.png ">
+  <meta name ="msapplication-TileColor " content ="#2F3BA2 ">
+  <!-- Color the status bar on mobile devices -->
+  <meta name ="theme-color " content ="#3AB54A ">
+  <!-- 设置CSS文件指向 -->
+  <link rel ="stylesheet" href ="../css/conditions.css" type ="text/css" media ="all">
+
+</head>
+
+<body class="disable-default-action">
+<div class="container">
+  <header>
+    <div class="appIcon">
+      <h2 class="appName">G O L D S T O N E</h2>
+    </div>
+  </header>
+  <main class="main">
+    <div class="headerBlock">
+      <h1 class="headerTitle">用戶協議</h1>
+    </div>
+
+    <div class ="conditionBlock">
+      <p class ="contentText">
+        這些條款和條件（“條款”，“條款和條件”）管理您與GoldStone（“我們”，“我們”或“我們”）運營的GoldStone移動應用程序（“服務”）的關系。
+      </p>
+      <p class ="contentText">
+        在使用我們的GoldStone移動應用程序（“服務”）之前，請仔細閱讀這些條款和條件。
+      </p>
+      <p class ="contentText">
+        您訪問和使用本服務的條件是您接受並遵守這些條款。這些條款適用於訪問或使用本服務的所有訪問者，用戶和其他人。
+      </p>
+      <p class ="contentText">
+        通過訪問或使用本服務，您同意受這些條款的約束。如果您不同意這些條款的任何部分，則您可能無法訪問該服務。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">錢包與資產</h3>
+      <p class ="contentText">
+        當您在GoldStone中創建或導入錢包時，私鑰保存在本地，並且我們<span class ="attentionText">從不</span>上傳任何形式的私鑰或助記符或密鑰庫。
+      </p>
+      <p class ="contentText">
+
+        因為Goldstone不在雲端存儲您的這些數據，因此也
+        <span class ="attentionText">無法從GoldStone服務器恢復</span>。
+      </p>
+      <p class ="contentText">
+        請確保將您的
+        <span class ="attentionText">助記詞</span>/
+        <span class ="attentionText">私鑰</span>/
+        <span class ="attentionText">Keystore</span>
+        妥善備份，私鑰或助記符或Keystore。
+      </p>
+      <p class ="contentText">
+        資產價格由第三方網站支持，可以作為參考。請註意，您資產的真實價值取決於您的具體交易行為。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">知識產權</h3>
+      <p class ="contentText">本服務及其原始內容，功能和功能現在仍將是GoldStone及其許可人的專有財產。本服務受比利時和外國的版權，商標和其他法律保護。未經金石事先書面同意，我們的商標和商業外觀不得用於任何產品或服務。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">其他網站服務或鏈接</h3>
+      <p class ="contentText">
+        我們的服務可能包含指向非GoldStone擁有或控制的第三方網站或服務的鏈接。
+      </p>
+      <p class ="contentText">
+        GoldStone無法控制任何第三方網站或服務的內容、隱私政策或慣例，也不承擔任何責任。您需要進壹步承認並同意，對於經由第三方商品或服務而導致直接或間接產生的任何損害或損失，GoldStone不承擔責任。
+      </p>
+      <p class ="contentText">
+        我們強烈建議您閱讀您訪問的任何第三方網站或服務的條款和條件以及隱私政策。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">服務終止</h3>
+      <p class ="contentText">
+        在包括但不限於用戶違反條款的情況下，我們可能會以任何理由立即終止或暫停您對Goldstone服務的使用，恕不另行通知或承擔責任。
+      </p>
+      <p class ="contentText">
+        服務終止後，您使用本服務的權利將立即停止。如果您想主動終止，您可以停止使用本服務。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">責任限制</h3>
+      <p class ="contentText">
+        在任何情況下，GoldStone及其董事，雇員，合作夥伴，代理商，供應商或關聯公司均不對任何間接的，附帶的，特殊的，相應的或懲罰性的損害負責，包括但不限於利潤損失，數據，使用，商譽，或因以下原因導致的其他無形損失：
+      </p>
+      <p class ="contentText">（i）您訪問或使用或無法訪問或使用本服務;
+      </p>
+      <p class ="contentText">（ii）服務上任何第三方的行為或內容;
+      </p>
+      <p class ="contentText">（iii）從服務中獲得的任何內容;
+      </p>
+      <p class ="contentText">（iv）以保修，合同，侵權（包括疏忽）或任何其他法律理論為依據，無論我們是否已被告知此類損害的可能性；
+      </p>
+      <p class ="contentText">
+        （iv）未經授權訪問，使用或更改您的傳輸或內容如果發現這裏提出的補救措施沒有達到其基本目的。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">免責聲明</h3>
+      <p class ="contentText">
+        您使用本服務需自擔風險。該服務按“原樣”和“可用”的基礎提供。本服務不提供任何明示或暗示的擔保，包括但不限於對適銷性，適用於特定目的，不侵權或履行過程的暗示擔保。
+      </p>
+      <p class ="contentText">
+        GoldStone其子公司，附屬公司及其許可人不保證：a）本服務將在任何特定時間或地點不間斷，安全或可用; b）任何錯誤或缺陷將被糾正; c）本服務不含病毒或其他有害成分;或d）使用本服務的結果將符合您的要求。
+      </p>
+    </div>
+
+    <div class ="conditionBlock">
+      <h3 class ="subtitle">變更</h3>
+      <p class ="contentText">
+        我們保留隨時自行決定修改或替換這些條款的權利。如果修訂是重要的，我們將嘗試在任何新條款生效之前提供至少15天的通知。重大變更的構成將由我們自行決定。
+      </p>
+      <p class ="contentText">
+        在修改生效後，如果繼續訪問或使用我們的服務，您同意受修訂條款的約束。如果您不同意新條款，請停止使用本服務。
+      </p>
+    </div>
+
+    <div class ="signatureBlock">
+      <h5 class ="signature">更新於：2018年5月15日</h5>
+    </div>
+  </main>
+</div>
+</body>
+
+</html>

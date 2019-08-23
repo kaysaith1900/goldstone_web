@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+  <title>GoldStone Help Center</title>
+  <meta content="Help Center" name="description">
+  <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 禁用用户手动缩放手势 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <!-- 设置webapp的icon -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/logo.png" />
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Add to home screen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content=GoldStone ">
+  <link rel ="icon " sizes ="192x192 " href ="../assets/touch/chrome-touch-icon.png ">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name ="apple-mobile-web-app-capable " content ="yes ">
+  <meta name ="apple-mobile-web-app-status-bar-style " content ="black-translucent ">
+  <meta name ="apple-mobile-web-app-title " content ="GoldStone ">
+  <link rel ="apple-touch-icon " href ="../assets/touch/apple-touch-icon.png ">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name ="msapplication-TileImage " content ="../assets/touch/ms-touch-icon.png ">
+  <meta name ="msapplication-TileColor " content ="#2F3BA2 ">
+  <!-- Color the status bar on mobile devices -->
+  <meta name ="theme-color " content ="#3AB54A ">
+
+  <!-- 引入通用css -->
+  <link rel="stylesheet " href="../css/helpCenter.css " type="text/css " media="all ">
+
+</head>
+
+<body class="cursorDefault disableDefaultAction flexContainerWrap">
+  <!-- 头部header -->
+  <header class="header">
+    <h1 class="title ">Help Center</h1>
+
+    <h3 class="pageDescription">What can we help you? </h3>
+    <a href="index.html " class="top logo cursorPointer "></a>
+		<div class="backgroundLayer"></div>
+  </header>
+
+
+  <!-- 问答单元 -->
+  <main class="container">
+
+    <!-- block -->
+    <a href="../wiki/en/helpSection/newToBlockChain.html" class="block flexContainerWrap ">
+      <div class="guideIcon "></div>
+      <h3 class="blockName fontBlue ">New to Blockchain</h3>
+      <h3 class="blockDescription fontGray ">If you are new to blockchain, enter here to learn how to have a account and the basic definations. </h3>
+    </a>
+
+  </main>
+  <footer class="flexContainerWrap ">
+    <div class="linkContainer flexContainer">
+      <a href="support" class="footerItem fontWhite ">
+        Contact Us
+      </a>
+      <a href="aboutUs" class="footerItem fontWhite ">
+        About Us
+      </a>
+      <a href="termAndConditions" class="footerItem fontWhite ">
+        User Agreement
+      </a>
+      <a href="privacy" class="footerItem fontWhite ">
+        Privacy Policy
+      </a>
+    </div>
+   <a href="index.html" class="bottom logo "></a>
+   <div class="bottom name fontWhite">GOLD STONE</div>
+   <div class="copyRight">© 2018–2018</div>
+   <div class="copyRight">Goldstone.io All Rights Reserved</div>
+  </footer>
+
+</body>

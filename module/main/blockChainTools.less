@@ -1,0 +1,244 @@
+
+p {
+  word-break: keep-all;
+  word-wrap: break-word;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  touch-action: manipulation;
+  text-decoration: none;
+  &:active {
+    color: black;
+  }
+}
+
+.toolsIntro {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.toolsIntro .intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: 600px;
+  position: relative;
+}
+
+.toolsIntro .intro .right {
+  right: -80px;
+}
+
+
+.mobilePageImage {
+  max-width: 100vw;
+  margin-left: calc((100% - 100vw) / 2);
+}
+.mobileRight {
+  float: none;
+  position: relative;
+  margin-top: 0;
+  right: 0;
+}
+
+#toolsContainer {
+  width: 100%;
+}
+
+.block {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+}
+
+.block.header .introSubtitle {
+  margin-top: 20px;
+}
+
+.block.header .intro {
+  padding-top: 80px;
+}
+.block .intro {
+  min-height: 0;
+  padding-bottom: 80px;
+}
+
+.single {
+  background-color: #123a5e;
+}
+
+.toolBox {
+  width: 100%;
+  margin: 50px 0;
+  max-width: 1180px;
+
+  .flexBox();
+  .justifyContent(center);
+  .flexWrap(wrap)
+}
+
+.tool {
+  float: left;
+  width: 260px;
+  background-color: white;
+  margin: 5px;
+  text-align: center;
+  min-width: 380px;
+  box-shadow: 0 3px 3px fade(black, 35%);
+  transition: all 300ms linear;
+  &:hover {
+    transition: all 300ms linear;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 10px 10px;
+    transform: scale(1.02);
+  }
+}
+
+.tool.mobile {
+  max-width: 380px;
+}
+
+@tagHeight: 28px;
+@imageHeight: 130px;
+@arrowButtonHeight: 82px;
+.toolImage {
+  height: @imageHeight - 60px;
+  padding: 30px 20px;
+  border-bottom: solid 1px fade(gray, 20%);
+  cursor: pointer;
+}
+
+.toolImage.mobile {
+  text-align: center;
+}
+
+.tag {
+  font-weight: bold;
+  margin-top: 20px;
+  line-height: @tagHeight - 20px;
+  width: 100%;
+  color: #2AB96C;
+  text-align: center;
+}
+
+p.description {
+  width: calc(100% - 60px);
+  margin: 20px 30px;
+  text-align: left;
+  height: calc(100% - 130px - @imageHeight - @tagHeight);
+  color: #425460;
+}
+
+.toolButton {
+  float: bottom;
+  size: @arrowButtonHeight - 50px;
+  margin: 60px 0 25px 25px;
+  text-align: left;
+  color: #255f97;
+  cursor: pointer;
+  &:hover {
+    color: #00B2FF;
+  }
+  &:active {
+    margin: 61px 0 24px 25px;
+  }
+}
+
+span.emphasis {
+  padding: 2px 4px;
+  margin: 0 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: fade(gray, 10%);
+  color: fade(black, 60%);
+}
+
+a span.emphasis {
+  background-color: fade(#2AB96C, 20%);
+  color: darken(#2AB96C, 20%);
+  &:hover {
+    color: #2AB96C;
+    cursor: pointer;
+  }
+}
+
+.flexBox() {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+// flex-flow是用来伸缩行换行，
+// flex-flow属性是同时设定“flex-Directory(伸缩流的方向)”和“flex-wrap（伸缩行换行）”属性的缩写，两个属性决定了伸缩容器的主轴与侧轴。
+// wrap ---- 新的元素可换行显示，不加此代码会挤在一行
+.flexFlow(@flexFlowType) {
+  -webkit-flex-flow: @flexFlowType;
+  -moz-flex-flow: @flexFlowType;
+  -ms-flex-flow: @flexFlowType;
+  flex-flow: @flexFlowType;
+}
+
+//flex-Directory属性可以用来设定伸缩容器的主轴的方向，这也决定了用户代理配置伸缩项目的方向。主要适用于伸缩容器，主要包括以下几个值：
+// row:flex-Directory的默认值，表示伸缩容器的主轴与当前书写模式的行内轴（文字布局的主要主向）。主轴起点与主轴终点方向分别等同于当前书写模式的始与结方向。
+// row-reverse：表示的是除了主轴起点与主轴终点方向交换以外同row属性值的作用。
+// column：表示的是伸缩容器的主轴与当前书写模式的块轴（块布局的主要方向）同向。主轴起点与主轴终点方向分别等同于当前书写模式的前与后方向。简单的可以理解为列布局。
+// column-reverse：表示的是除了主轴起点与主轴终点方向交换以外同“column”的属性值作用。
+.flexDirectory(@flexDirectoryType) {
+  -webkit-flex-Directory: @flexDirectoryType;
+  -moz-flex-Directory: @flexDirectoryType;
+  -ms-flex-Directory: @flexDirectoryType;
+  flex-Directory: @flexDirectoryType;
+}
+
+//flex-wrap属性主要用来控制伸缩容器是单行还是多行，也决定了侧轴方向一新的一行的堆放方向。
+// nowrap:flex-wrap的默认值，表示的是伸缩容器为单行。侧轴起点方向等同于当前书写模式的起点或前/头在侧轴的那一边，而侧轴终点方向是侧轴起点的相反方向。
+// wrap：表示的是伸缩容器为多行。侧轴起点方向等同于当前书写模式的起眯或前/头在侧轴的那一边，而侧轴终点方向是侧轴起点的相反方向。
+// wrap-reverse：除了侧轴起点与侧轴终点方向交换以外同wrap所起作用相同。
+.flexWrap(@flexWrapType) {
+  -webkit-flex-wrap: @flexWrapType;
+  -moz-flex-wrap: @flexWrapType;
+  -ms-flex-wrap: @flexWrapType;
+  flex-wrap: @flexWrapType;
+}
+
+// block之间的对齐方式(主轴)，默认的主轴是横轴
+// @alignItemsType:
+// flex-start ---- 主轴起始端对齐
+// flex-end ---- 主轴末端对齐
+// stretch    ---- 拉伸到和最大的那个一样宽
+.alignItems(@alignItemsType) {
+  -webkit-align-items: @alignItemsType;
+  -moz-align-items: @alignItemsType;
+  -ms-align-items: @alignItemsType;
+  align-items: @alignItemsType;
+}
+
+// block内容的对齐方式(侧轴)
+// @alignContentType:
+// flex-start ---- 纵轴起始端对齐
+// flex-end ---- 纵轴末端对齐
+// stretch    ---- 拉伸到和最大的那个一样高
+.alignContent(@alignContentType) {
+  -webkit-align-content: @alignContentType;
+  -moz-align-content: @alignContentType;
+  -ms-align-content: @alignContentType;
+  align-content: @alignContentType;
+}
+
+// 主轴对齐伸缩项目 @justifyContentType
+// flex-start：伸缩项目向一行的起始位置靠齐。item之间没有空隙。
+// flex-end：伸缩项目向一行的结束位置靠齐。item之间没有空隙。
+// center：伸缩项目向一行的中间位置靠齐。item之间没有空隙。
+// space-between：伸缩项目会平均地分布在一行里, 两段的item顶头。
+// space-around：伸缩项目会平均地分布在一行里，两段各有half margin。
+.justifyContent(@justifyContentType) {
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: @justifyContentType;
+  -moz-justify-content: @justifyContentType;
+  -ms-justify-content: @justifyContentType;
+  justify-content: @justifyContentType
+}

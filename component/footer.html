@@ -1,0 +1,163 @@
+<div class = "content">
+  <nav class = "company">
+    <li class = "title"></li>
+    <li class = "aboutUs">About Us</li>
+    <li class = "joinUs">Join Us</li>
+  </nav>
+  <nav class="socialMedia">
+    <li class = "title">Social Media</li>
+    <li class = "twitter">Twitter</li>
+    <li class = "telegram">Telegram</li>
+    <li class = "blog">Medium</li>
+    <li class = "reddit">Reddit</li>
+    <li class = "facebook">Facebook</li>
+  </nav>
+  <nav class="support">
+    <li class = "title">Legal</li>
+    <li class = "term">User Agreement</li>
+    <li class = "privacyPolicy">Privacy Policy</li>
+    <li class = "tools">Blockchain tools</li>
+    <li class = "language">Language</li>
+  </nav>
+  <div class = "norton"><img src = "./resources/images/Norton.svg"/></div>
+</div>
+<script>
+
+  $('.footer .company .title').html(setInternationalText('Company', '公司'))
+  $('.footer .company .aboutUs').html(setInternationalText('About Us', '关于我们'))
+  $('.footer .company .joinUs').html(setInternationalText('Join Us', '加入我们'))
+
+  $('.footer .socialMedia .title').html(setInternationalText('Social Media', '社交媒体'))
+
+  $('.footer .support .title').html(setInternationalText('Support', '支持'))
+  $('.footer .support .tools').html(setInternationalText('Blockchain Tools', '区块链工具'))
+  $('.footer .support .term').html(setInternationalText('User Agreement', '用户条款'))
+  $('.footer .support .privacyPolicy').html(setInternationalText('Privacy Policy', '隐私协议'))
+  $('.footer .support .language').html(setInternationalText('Language', '语言切换'))
+
+  $('.footer .aboutUs').click(function() {
+    loadAboutUs()
+    updateHeaderSelectedStyle()
+  })
+  $('.footer .joinUs').click(function() {
+    loadJoinUs()
+    updateHeaderSelectedStyle()
+  })
+
+  $('.footer .privacyPolicy').click(function() {
+    loadPrivacyPolicy()
+    updateHeaderSelectedStyle()
+  })
+
+  $('.footer .tools').click(function() {
+    loadBlockChainTools()
+    updateHeaderSelectedStyle()
+  })
+
+  $('.footer .term').click(function() {
+    loadTerm()
+    updateHeaderSelectedStyle()
+  })
+
+  $('.footer .language').click(function() {
+    var top = $(this).offset().top
+    var left = $(this).offset().left
+    if (left === 40) {
+      left = $(this).width() / 2 - 30
+    }
+    showLanguageSelectionBoard(top, left)
+  })
+
+  $('.footer .blog').click(function() {
+    $(location).attr('href', '//medium.com/@goldstoneio')
+  })
+
+  $('.footer .telegram').click(function() {
+    $(location).attr('href', '//t.me/goldstone_io')
+  })
+
+  $('.footer .twitter').click(function() {
+    $(location).attr('href', '//twitter.com/goldstoneio')
+  })
+
+  $('.footer .facebook').click(function() {
+    $(location).attr('href', '//www.facebook.com/GoldStoneio')
+  })
+
+  $('.footer .reddit').click(function() {
+    $(location).attr('href', '//www.reddit.com/user/GoldStoneIO')
+  })
+
+  function showLanguageSelectionBoard (top, left) {
+    $('.wrapper').append('<div class="languageDashBoard"></div>')
+    var dashboard = $('.languageDashBoard')
+    dashboard.load('./component/selectionTip.html')
+    dashboard.css({
+      top: top - 120,
+      left: left
+    })
+  }
+
+  if (isMobile === true) {
+    var footerUl = $('.footer nav')
+    footerUl.addClass('mobileUl')
+    footerUl.css({ paddingRight: 0 })
+    $('.norton').addClass('mobileNorton')
+    $('.norton img').addClass('mobileNortonImage')
+  }
+</script>
+
+<style type = "text/css" media = "screen">
+
+  .norton {
+    width: 118px;
+    height: 118px;
+    float: right;
+    margin-right: 80px;
+    margin-top: 60px;
+  }
+
+  .mobileNorton {
+    width: 100%;
+    margin-top: 100px;
+    margin-right: 0;
+  }
+
+  .mobileNortonImage {
+    margin-left: calc((100% - 118px) / 2);
+  }
+
+  .footer .content nav {
+    float: left;
+    padding-right: 100px;
+  }
+
+  .footer .content nav li {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    padding-top: 20px;
+    opacity: 0.65;
+    transition: all 200ms linear;
+  }
+
+  .footer .content nav li:hover {
+    cursor: pointer;
+    transition: all 200ms linear;
+    opacity: 1;
+  }
+
+  .footer .content .title {
+    opacity: 1;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .mobileUl {
+    width: 100%;
+    float: left;
+    text-align: center;
+  }
+</style>

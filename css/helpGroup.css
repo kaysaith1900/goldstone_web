@@ -1,0 +1,570 @@
+/*禁止显示touch选中效果*/
+.disableDefaultAction {
+  -webkit-touch-callout: none;
+}
+body {
+  -webkit-touch-callout: none;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorDefault {
+  cursor: default;
+}
+.noTouchStyleOnMobileDevice {
+  -webkit-tap-highlight-color: transparent;
+}
+.fullSize {
+  width: 100%;
+  height: 100%;
+}
+.fullFill {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.flexContainerWrap {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  /*items纵轴居中*/
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  /*行纵轴居中*/
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  align-content: flex-start;
+}
+.flexContainerWrap1 {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  /*items纵轴居中*/
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  /*行纵轴居中*/
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+.flexContainer {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  /*items纵轴居中*/
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  /*行纵轴居中*/
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+.navigationTitle {
+  font-size: 18px;
+  font-weight: normal;
+}
+.bigTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+.heading1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.heading2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.heading3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.contentText {
+  font-size: 14px;
+  font-weight: normal;
+}
+.signature {
+  font-size: 14px;
+  font-weight: normal;
+}
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, rgba(14, 108, 140, 0.6));
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, rgba(18, 39, 80, 0.1));
+}
+.fillGreen {
+  background-color: #2AB96C;
+}
+.fillWhite {
+  background-color: white;
+}
+.fillYellow {
+  background-color: #ffeb00;
+}
+.fillCyan {
+  background-color: #8DE2C0;
+}
+.fillBlue {
+  background-color: #00B2FF;
+}
+.fillOrange {
+  background-color: #E75E42;
+}
+.fillDarkBlue {
+  background-color: #122750;
+}
+.fillDarkGreen {
+  background-color: #0e6c8c;
+}
+/* 灰色 */
+.fillBackgroundGray {
+  background-color: #F4F7FA;
+}
+.fillLightGray {
+  background-color: #B9BFC6;
+}
+/* 字体颜色 */
+.fontWhite {
+  color: white;
+}
+.fontGray {
+  color: rgba(0, 0, 0, 0.4);
+}
+.fontBlack {
+  color: #333F50;
+}
+.fontOrange {
+  color: #E75E42;
+}
+.fontGreen {
+  color: #2AB96C;
+}
+.fontWhite {
+  color: white;
+}
+.fontYellow {
+  color: #ffeb00;
+}
+.fontCyan {
+  color: #8DE2C0;
+}
+.fontBlue {
+  color: #00B2FF;
+}
+/* 渐变色 */
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, #114B6D);
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, #122750);
+}
+html,
+body {
+  font-family: 'englishFont', PingFangSC-Regular, PingFangTC-Regular, Microsoft YaHei, STHeiti Light, serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #425460;
+}
+.attentionText {
+  font-weight: 900;
+  margin: 0 1px 0 1px;
+  padding: 2px 4px 1px 4px;
+  background-color: rgba(37, 143, 48, 0.07);
+  border-radius: 3px;
+}
+header {
+  float: left;
+  width: 100%;
+}
+/* 去掉点击时的蓝色阴影 */
+a {
+  color: #122750;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+a:hover {
+  color: #2AB96C;
+}
+a:active {
+  color: #00B2FF;
+}
+a:visited {
+  color: #122750;
+}
+.main {
+  float: left;
+  width: 100%;
+}
+/*自定义字体*/
+@font-face {
+  font-family: 'englishFont';
+  src: url('../assets/fonts/english-font-bold.eot') format('eot'), url('../assets/fonts/english-font-bold.ttf') format('ttf'), url('../assets/fonts/english-font-bold.woff') format('woff'), url('../assets/fonts/english-font-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'englishFont';
+  src: url('../assets/fonts/english-font-light.eot') format('eot'), url('../assets/fonts/english-font-light.ttf') format('ttf'), url('../assets/fonts/english-font-light.woff') format('woff'), url('../assets/fonts/english-font-light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'englishFont';
+  src: url('../assets/fonts/english-font-bolder.eot') format('eot'), url('../assets/fonts/english-font-bolder.ttf') format('ttf'), url('../assets/fonts/english-font-bolder.woff') format('woff'), url('../assets/fonts/english-font-bolder.svg') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+html,
+body {
+  position: absolute;
+  z-index: -2;
+  background: #122750;
+  height: 100%;
+}
+.header {
+  position: absolute;
+  z-index: -200;
+  width: 100%;
+  height: 100%;
+}
+.backgroundLayer {
+  z-index: -1;
+  height: 200px;
+  background: linear-gradient(180deg, #122750, rgba(14, 108, 140, 0.6));
+  background: linear-gradient(180deg, #122750, #114B6D);
+}
+.top.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+}
+.logo:hover {
+  top: 21px;
+}
+.logo:active {
+  top: 22px;
+}
+.container {
+  float: left;
+  margin-top: 200px;
+  padding: 30px 40px;
+  width: calc(100% - 80px);
+  height: auto;
+  background-color: white;
+  z-index: -1;
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  /*items纵轴居中*/
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  /*行纵轴居中*/
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  align-content: flex-start;
+}
+.block {
+  width: 240px;
+  height: auto;
+  padding: 25px;
+  margin: 15px 10px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 2px 25px rgba(105, 118, 140, 0.2);
+  cursor: pointer;
+}
+.block:hover {
+  padding: 35px;
+  margin: 4px 0px 6px 0px;
+  box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.4);
+}
+.block:active {
+  margin: 13px 10px 17px 10px;
+  box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.4);
+}
+.blockIcon {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center;
+}
+.shadow {
+  box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.1);
+}
+/* 下面是字体们的样式 */
+h3.pageDescription {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 140px;
+  left: 10%;
+  width: 80%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+h1.title {
+  color: white;
+  float: left;
+  width: 100%;
+  margin-top: 75px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+}
+.pageIntroduction {
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+  height: 20px;
+  padding: 40px 30px;
+  width: calc(100% - 60px);
+  text-align: center;
+  background-color: #00B2FF;
+}
+.blockName {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+.blockDescription {
+  color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: -2px 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+}
+/* 下面是icon的引用 */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  background-image: url('../assets/logo.png');
+}
+.guideIcon {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url('../assets/icon/lego-toy.png');
+}
+.transferIcon {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url('../assets/icon/money-network.png');
+}
+.walletIcon {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  background-image: url('../assets/icon/financial-care.png');
+}
+/* 页底标识 */
+footer {
+  float: left;
+  padding: 30px 30px 50px 30px;
+  height: auto;
+  width: calc(100% - 60px);
+}
+.bottom.logo {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.bottom.name {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 0 0 20px 0;
+}
+.linkContainer {
+  float: left;
+  margin: 0 10% 20px 10%;
+  width: calc(100% - 80px);
+}
+a.footerItem {
+  text-align: left;
+  margin: 5px 25px;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+a.footerItem:active {
+  color: white;
+}
+a.footerItem:hover {
+  color: #2AB96C;
+}
+.copyRight {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.3);
+}
+html,
+body {
+  background-color: #F6F7FB;
+}
+.navigation {
+  position: fixed;
+  z-index: 100px;
+  height: 24px;
+  width: calc(100% - 20px);
+  padding: 10px 10px;
+}
+.header {
+  margin-top: 44px;
+  height: 190px;
+}
+.nav.logo {
+  position: absolute;
+  left: 30px;
+  width: 28px;
+  height: 28px;
+}
+a.nav.title {
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+.headerIcon {
+  z-index: -1;
+  position: absolute;
+  margin: 20px calc(50% - 40px);
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.headerTitle {
+  margin: 105px 0 0px 0;
+  text-align: center;
+  width: 100%;
+}
+.blockDescription {
+  margin: 0 10%;
+  width: 80%;
+}
+main {
+  margin-top: 250px;
+  padding: 10px 20px 50px 20px;
+  width: calc(100% - 80px);
+}
+.tableSection {
+  padding: 0 0 20px 0;
+}
+.sectionTitle {
+  text-align: center;
+  margin: 20px 0 15px 0;
+  width: 100% ;
+}
+/* table */
+a.tableItem {
+  float: left;
+  height: 20px;
+  padding: 16px 20px;
+  margin: 5px 10px;
+  width: 280px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: normal;
+  box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.1);
+}
+a.tableItem a {
+  color: #122750;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+a.tableItem a:hover {
+  color: #00B2FF;
+}
+a.tableItem a:active {
+  color: #2AB96C;
+}
+a.tableItem a:visited {
+  color: #122750;
+}

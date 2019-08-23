@@ -1,0 +1,533 @@
+<div class = "content">
+  <div class = "toolsIntro">
+    <div class = "intro">
+      <div class = "left webLeft">
+        <h1 class = "introTitle"></h1>
+        <p class = "introSubtitle"></div>
+      <div class = "right"><img src = "./resources/images/tools/blockchainTools.svg"
+                                srcset = "./resources/images/tools/blockchainTools.svg"/>
+      </div>
+    </div>
+    <div class = "wave"></div>
+    <div id = "toolsContainer">
+      <div class = "page block single header">
+        <div class = "template">
+          <div class = "intro">
+            <p class = "introTitle centerText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    addWave()
+
+    var baseImageUrl = 'resources/images/tools/',
+      toolsTitle = setInternationalText('Block Chain Tools', '第三方区块链工具'),
+      toolsDescription = setInternationalText(
+        'GoldStone recommends you to use safe third-party blockchain tools to double-check your accounts and assets.', 'GOLD STONE 建议您: 使用区块链钱包或其他应用软件时，也可以使用安全的第三方浏览器来查询自己的账号或转账信息，来进行二步确认。<br>（区块链浏览器是公开查询链上数据的工具，他们不应向您索要私钥/助记词/keystore/账户名等敏感信息，也请您留意切勿透露自己的账号信息）'),
+      blockTitle = setInternationalText('Recommended  tools for each blockchain', '以下是各链对应的第三方浏览器'),
+      toolsSubtitle = setInternationalText(
+        ['Those tools may contain links to third-party web sites or services that are not owned or controlled by GoldStone.',
+          'GoldStone has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that GoldStone shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such websites or services.',
+          'We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.'],
+        ['以下工具包含非GoldStone拥有或控制的第三方网站或服务的链接，GoldStone无法控制任何第三方网站或服务的内容、隐私政策或惯例，也不承担任何责任。您需要进一步承认并同意，对于经由第三方商品或服务而导致直接或间接产生的任何损害或损失，GoldStone不承担责任。',
+          '我们强烈建议您阅读您访问的任何第三方网站或服务的条款和条件以及隐私政策。']),
+      explorerTag = setInternationalText('# Blockchain Explorer', '# 区块链浏览器'),
+      faucetTag = setInternationalText('Faucet', '测试币领取'),
+      toolButtonText = setInternationalText('View Website →', '跳转到网站 →'),
+      btc = setInternationalText('Bitcoin Chain', 'Bitcoin (比特币)'),
+      bch = setInternationalText('Bitcoin Cash Chain', 'Bitcoin Cash (比特币现金)'),
+      eth = setInternationalText('Ethereum Chain', 'Ethereum (以太坊)'),
+      etc = setInternationalText('Ethereum Chain', 'Ethereum Classic (以太坊经典)'),
+      eos = setInternationalText('EOS Chain', 'EOS链'),
+      ltc = setInternationalText('Litecoin Chain', 'Litecoin (莱特币)')
+
+    $('.introSubtitle').html(toolsDescription)
+    $('.toolsIntro .introTitle').html(toolsTitle)
+    $('.block .introTitle').html(blockTitle)
+    for (var index in toolsSubtitle) {
+      $('.template .intro ').append(
+        '<p class="introSubtitle centerText">' + toolsSubtitle[index] + '</div>')
+    }
+
+
+    var blocktools = [
+      {
+        chainName: btc,
+        tools: [
+          {
+            image: 'blockcypher.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'Support for querying blocks, transfers, and addresses. You can also see estimated fees based on average fee of transactions in recent blocks.' +
+              '<br>It also provides data for multiple blockchains including <span class="emphasis">Bitcoin</span> and <span class="emphasis">Litecoin</span>.' +
+              '<br><br>For BitCoin: ' +
+              '<a href="https://live.blockcypher.com/btc/" target="_blank"><span class="emphasis">Main</span></a>,' +
+              '<a href="https://live.blockcypher.com/btc-testnet/" target="_blank"><span class="emphasis">Testnet3</span></a>'
+              ,
+              'Block Cypher 支持查询区块、转账、地址,还可以看到根据最近几个块的平均矿工费预估出的估算矿工费。' +
+              '<br>同时提供<span class="emphasis">比特币</span>和<span class="emphasis">莱特币</span>在内的多个比特币系区块链的数据。' +
+              '<br><br>针对比特币，同时支持' +
+              '<a href="https://live.blockcypher.com/btc/" target="_blank"><span class="emphasis">主网</span></a>,' +
+              '<a href="https://live.blockcypher.com/btc-testnet/" target="_blank"><span class="emphasis">Testnet3</span></a>'),
+            url: 'https://live.blockcypher.com/btc/'
+          },
+          {
+            image: 'blocktrail.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'Block Trail supports querying blocks, transfers, addresses, and viewing the contribution of the pool.' +
+              '<br>It also provides data for multiple blockchains including <span class="emphasis">Bitcoin</span> and <span class="emphasis">Bitcoin cash</span>.' +
+              '<br><br>For BitCoin: ' +
+              '<a href="https://www.blocktrail.com/BTC" target="_blank"><span class="emphasis">Main</span></a>,' +
+              '<a href="https://www.blocktrail.com/tBTC" target="_blank"><span class="emphasis">Testnet3</span></a>',
+              'Block Trail 支持查询区块、转账、地址, 还可查看矿池的贡献占比。' +
+              '<br>同时提供<span class="emphasis">比特币</span>和<span class="emphasis">比特币现金</span>的区块链的数据。' +
+              '<br><br>针对比特币，同时支持' +
+              '<a href="https://www.blocktrail.com/BTC" target="_blank"><span class="emphasis">主网</span></a>,' +
+              '<a href="https://www.blocktrail.com/tBTC" target="_blank"><span class="emphasis">Testnet3</span></a>'),
+            url: 'https://www.blocktrail.com/BTC'
+          },
+          {
+            image: 'chainso.svg',
+            tag: 'Explorer',
+            supportTestnet: false,
+            description: setInternationalText(
+              'SoChain is a website that supports querying block information, address information, and transfer information. On the home page of the website, you can clearly see the average time spent on current transfers.' +
+              'It provides data on 5 chains including <span class="emphasis">Bitcoin</span> and <span class="emphasis">Litecoin</span>, both providing main and test network data.' +
+              '<br><br>For BitCoin: ' +
+              '<a href="https://chain.so/btc" target="_blank"><span class="emphasis">Main</span></a>,' +
+              '<a href="https://chain.so/testnet/btc" target="_blank"><span class="emphasis">Testnet3</span></a>'
+
+              ,
+              'SoChain是一个支持查询区块信息、地址信息、转账信息的网站。在该网站首页的图表，你可以清晰了解到当前转账的平均耗时。<br>SoChain提供<span class="emphasis">比特币</span>和<span class="emphasis">莱特币</span>在内的5个链的数据, 均提供主网和测试网数据' +
+              '<br><br>比特币:' +
+              '<a href="https://chain.so/btc" target="_blank"><span class="emphasis">主网</span></a>,' +
+              '<a href="https://chain.so/testnet/btc" target="_blank"><span class="emphasis">Testnet3</span></a>'),
+            url: 'https://chain.so/btc'
+          }
+        ]
+      }, {
+        chainName: eos,
+        tools: [
+          {
+            image: 'bloks.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'Bloks.io is a website that supports querying EOS block information, account information, and transfer information. It also provides node ranking query function. Bloks is very friendly with EOS transfer information and supports the selection of transfer records by transfer type or by currency.' +
+              '<br><br>Testnets are supported: ' +
+              '<a href="https://jungle.bloks.io" target="_blank"><span class="emphasis">Jungle</span></a>,' +
+              '<a href="https://kylin.bloks.io" target="_blank"><span class="emphasis">Kylin</span></a>',
+              'Bloks.io 是一个支持查询<span class="emphasis">EOS</span>区块信息、账户信息、转账信息的网站，也提供节点排行查询功能。Bloks对EOS转账信息的显示非常友好，支持按转账类型或是按币种筛选转账记录。' +
+              '<br><br>支持测试网络: ' +
+              '<a href="https://jungle.bloks.io" target="_blank"><span class="emphasis">Jungle</span></a>,' +
+              '<a href="https://kylin.bloks.io" target="_blank"><span class="emphasis">Kylin</span></a>'),
+            url: 'https://bloks.io/'
+          },
+          {
+            image: 'eospark.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'EOS Park explorer provides <span class="emphasis">EOS</span> block information, account information, transfer information, node ranking queries, and account auction queries. ' +
+              '<br><br>Testnets are supported: ' +
+              '<a href="https://eospark.com/Jungle" target="_blank"><span class="emphasis">Jungle</span></a>,' +
+              '<a href="https://eospark.com/Kylin" target="_blank"><span class="emphasis">Kylin</span></a>'
+              ,
+              'EOS Park 浏览器提供<span class="emphasis">EOS</span>区块信息、账户信息、转账信息、节点排行查询及账户竞拍查询的功能。' +
+              '<br><br>支持测试网络: ' +
+              '<a href="https://eospark.com/Jungle" target="_blank"><span class="emphasis">Jungle</span></a>,' +
+              '<a href="https://eospark.com/Kylin" target="_blank"><span class="emphasis">Kylin</span></a>'),
+            url: 'https://eospark.com/'
+          },
+          {
+            image: 'eostracker.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'EOS Tracker is a website that supports querying <span class="emphasis">EOS</span> block information, account information, transfer information, voting information, and the project provides open source code on <a href="https://github.com/EOSEssentials/EOSTracker" target="_blank"><span class="emphasis">Github</span></a>.' +
+              'Only mainnet is supported',
+              'EOS Tracker 是一个支持查询<span class="emphasis">EOS</span>区块信息、账户信息、转账信息、投票信息的网站，该项目在<a href="https://github.com/EOSEssentials/EOSTracker" target="_blank"><span class="emphasis">Github</span></a>上提供开源代码' +
+              '<br><br>仅提供主网数据。 '),
+            url: 'https://eostracker.io/'
+          }
+        ]
+      }, {
+        chainName: eth,
+        tools: [
+          {
+            image: 'etherscan.svg',
+            tag: 'Explorer',
+            name: 'Etherscan',
+            supportTestnet: true,
+            description: setInternationalText(
+              'Etherscan is a website that supports querying <span class="emphasis">Ethereum</span> block information, address information, transfer information, and token information. At the same time, a visualization chart of the block state such as Ethereum addresses growth chart is provided.' +
+              '<br><br>Testnets are supported: ' +
+              '<a href="https://ropsten.etherscan.io/" target="_blank"><span class="emphasis">Ropsten</span></a>,' +
+              '<a href="https://kovan.etherscan.io/" target="_blank"><span class="emphasis">Kovan</span></a>,' +
+              '<a href="https://rinkeby.etherscan.io/" target="_blank"><span class="emphasis">Rinkeby</span></a>',
+              'Etherscan 是一个支持查询<span class="emphasis">以太坊</span>区块信息、地址信息、转账信息、token信息的网站。同时提供例如以太坊地址成长曲线等区块状态的可视化图表。' +
+              '<br><br>支持测试网络: ' +
+              '<a href="https://ropsten.etherscan.io/" target="_blank"><span class="emphasis">Ropsten</span></a>,' +
+              '<a href="https://kovan.etherscan.io/" target="_blank"><span class="emphasis">Kovan</span></a>,' +
+              '<a href="https://rinkeby.etherscan.io/" target="_blank"><span class="emphasis">Rinkeby</span></a>'),
+            url: 'https://etherscan.io/'
+          }
+        ]
+      }, {
+        chainName: etc,
+        tools: [
+          {
+            image: 'gastracker.svg',
+            tag: 'Explorer',
+            supportTestnet: false,
+            description: setInternationalText(
+              'This is a website that supports querying <span class="emphasis">Ethereum classic</span> block information, account information, and transfer information.' +
+              '<br><br>Only mainnet is supported',
+              '这是一个支持查询<span class="emphasis">以太坊经典</span>区块信息、账户信息、转账信息的网站' +
+              '<br><br>仅提供主网数据。 '),
+            url: 'https://gastracker.io/'
+          },
+          {
+            image: 'morden.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'This is a website that supports querying <span class="emphasis">Ethereum classic</span> block information, account information, and transfer information.' +
+              '<br><br>Only <a href="http://mordentool.ethernode.io/home" target="_blank"><span class="emphasis">Morden</span></a> testnet is supported',
+              '这是一个支持查询<span class="emphasis">以太坊经典</span>区块信息、账户信息、转账信息的网站' +
+              '<br><br>仅提供<a href="http://mordentool.ethernode.io/home" target="_blank"><span class="emphasis">Morden</span></a>测试网数据数据。 '),
+
+            url: 'http://mordentool.ethernode.io/home'
+          }
+        ]
+      }, {
+        chainName: ltc,
+        tools: [
+          {
+            image: 'blockcypher.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'Support for querying blocks, transfers, and addresses. You can also see estimated fees based on average fee of transactions in recent blocks.' +
+              '<br>It also provides data for multiple blockchains including <span class="emphasis">Bitcoin</span> and <span class="emphasis">Litecoin</span>.' +
+              '<br><br>For Litecoin: ' +
+              '<a href="https://live.blockcypher.com/ltc/" target="_blank"><span class="emphasis">Mainnet</span></a> only'
+              ,
+              'Block Cypher 支持查询<span class="emphasis">莱特币</span>区块、转账、地址,还可以看到根据最近几个块的平均矿工费预估出的估算矿工费。' +
+              '<br>同时提供<span class="emphasis">比特币</span>和<span class="emphasis">莱特币</span>在内的多个比特币系区块链的数据。' +
+              '<br><br>针对莱特币，该网站仅支持' +
+              '<a href="https://live.blockcypher.com/ltc/" target="_blank"><span class="emphasis">主网</span></a>'),
+            url: 'https://live.blockcypher.com/ltc/'
+          },
+          {
+            image: 'chainso.svg',
+            tag: 'Explorer',
+            supportTestnet: false,
+            description: setInternationalText(
+              'SoChain is a website that supports querying block information, address information, and transfer information. On the home page of the website, you can clearly see the average time spent on current transfers.' +
+              'It provides data on 5 chains including <span class="emphasis">Bitcoin</span> and <span class="emphasis">Litecoin</span>, both providing main and test network data.' +
+              '<br><br>For Litecoin: ' +
+              '<a href="https://chain.so/ltc" target="_blank"><span class="emphasis">Main</span></a>,' +
+              '<a href="https://chain.so/testnet/ltc" target="_blank"><span class="emphasis">Testnet</span></a>'
+              ,
+              'SoChain是一个支持查询<span class="emphasis">莱特币</span>区块信息、地址信息、转账信息的网站。在该网站首页的图表，你可以清晰了解到当前转账的平均耗时。<br>SoChain提供<span class="emphasis">比特币</span>和<span class="emphasis">莱特币</span>在内的5个链的数据, 均提供主网和测试网数据' +
+              '<br><br>莱特币:' +
+              '<a href="https://chain.so/ltc" target="_blank"><span class="emphasis">主网</span></a>,' +
+              '<a href="https://chain.so/testnet/ltc" target="_blank"><span class="emphasis">测试网</span></a>'),
+            url: 'https://chain.so/btc'
+          }
+        ]
+      }, {
+        chainName: bch,
+        tools: [
+          {
+            image: 'blocktrail.svg',
+            tag: 'Explorer',
+            supportTestnet: true,
+            description: setInternationalText(
+              'Block Trail supports querying blocks, transfers, addresses, and viewing the contribution of the pool.' +
+              '<br>It also provides data for multiple blockchains including <span class="emphasis">Bitcoin</span> and <span class="emphasis">Bitcoin cash</span>.' +
+              '<br><br>For BitCoin Cash: ' +
+              '<a href="https://www.blocktrail.com/BCC" target="_blank"><span class="emphasis">Main</span></a>,' +
+              '<a href="https://www.blocktrail.com/tBCC" target="_blank"><span class="emphasis">Testnet3</span></a>',
+              'Block Trail 支持查询区块、转账、地址, 还可查看矿池的贡献占比。' +
+              '<br>同时提供<span class="emphasis">比特币</span>和<span class="emphasis">比特币现金</span>的区块链的数据。' +
+              '<br><br>针对比特币现金，同时支持' +
+              '<a href="https://www.blocktrail.com/BCC" target="_blank"><span class="emphasis">主网</span></a>,' +
+              '<a href="https://www.blocktrail.com/tBCC" target="_blank"><span class="emphasis">测试网</span></a>'),
+            url: 'https://www.blocktrail.com/BCC'
+          }
+        ]
+      }
+    ]
+
+
+    for (var blockIndex in blocktools) {
+      var block = blocktools[blockIndex]
+      if ((typeof block.chainName !== 'undefined') && (typeof block.tools !== 'undefined')) {
+
+        if (blockIndex % 2 === 0) {
+          $('#toolsContainer').append(
+            '<div class="block">' +
+            '  <div class = "template">' +
+            '    <div class = "intro">' +
+            '      <div class = "top">' +
+            '        <p class = "introTitle centerText">' + block.chainName + '</p>' +
+            '      </div>' +
+            '      <div class = bottom>' +
+            '         <div class="toolBox toolBox' + blockIndex + '">' +
+            '      </div>' +
+            '    </div>' +
+            '  </div>' +
+            '</div>'
+          )
+        } else {
+          $('#toolsContainer').append(
+            '<div class="block single">' +
+            '  <div class = "template">' +
+            '    <div class = "intro">' +
+            '      <div class = "top">' +
+            '        <p class = "introTitle centerText">' + block.chainName + '</p>' +
+            '      </div>' +
+            '      <div class = bottom>' +
+            '         <div class="toolBox toolBox' + blockIndex + '">' +
+            '      </div>' +
+            '    </div>' +
+            '  </div>' +
+            '</div>')
+        }
+
+
+        for (var toolIndex in block.tools) {
+          var tool = block.tools[toolIndex]
+
+          $('.toolBox' + blockIndex).append(
+            '<div class="tool" >' +
+            '<img src="' + baseImageUrl + tool.image + '" class="toolImage" id="block' + blockIndex + 'toolImage' + toolIndex + '">' +
+            '<p class="tag tag' + tool.tag + '"></p>' +
+            '<p class="description">' + tool.description + '</p>' +
+            '<p class="toolButton" id="block' + blockIndex + 'tool' + toolIndex + '"></p>' +
+            '</div>'
+          )
+        }
+      }
+    }
+
+    $('.toolImage').click(function () {
+      var blockIndex = this.id.match(/(block=?)(\S*)(?=toolImage)/)[2],
+        toolIndex = this.id.match(/(toolImage=?)(\S*)/)[2]
+      console.log(blockIndex)
+      console.log(toolIndex)
+      window.open(blocktools[blockIndex].tools[toolIndex].url)
+    })
+
+    $('.toolButton').click(function () {
+      var blockIndex = this.id.match(/(block=?)(\S*)(?=tool)/)[2],
+        toolIndex = this.id.match(/(tool=?)(\S*)/)[2]
+      console.log(blockIndex)
+      console.log(toolIndex)
+      window.open(blocktools[blockIndex].tools[toolIndex].url)
+    })
+
+    $('.tagExplorer').html(explorerTag)
+    $('.toolButton').html(toolButtonText)
+
+    if (isMobile === true) {
+      var toolDiv = $('.tool'),
+        titleDiv = $('.blockName')
+      titleDiv.toggleClass('mobile')
+      toolDiv.toggleClass('mobile')
+      $('.toolsIntro .left').removeClass('webLeft').css({ marginTop: 60 })
+      $('.toolsIntro .left .introSubtitle').addClass('centerText')
+      $('.toolsIntro .left .introTitle').addClass('centerText')
+      $('.toolsIntro .right img').addClass('mobilePageImage')
+      $('.toolsIntro .right').addClass('mobileRight').removeClass('right')
+
+    }
+
+  </script>
+</div>
+<style type = "text/css" media = "screen">
+  p {
+    word-break: keep-all;
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    touch-action: manipulation;
+    text-decoration: none;
+  }
+
+  a:active {
+    color: black;
+  }
+
+  .toolsIntro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  .toolsIntro .intro {
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 600px;
+    position: relative;
+  }
+
+  .toolsIntro .intro .right {
+    right: -80px;
+  }
+
+  .mobilePageImage {
+    max-width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+  }
+
+  .mobileRight {
+    float: none;
+    position: relative;
+    margin-top: 0;
+    right: 0;
+  }
+
+  #toolsContainer {
+    width: 100%;
+  }
+
+  .block {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .block.header .introSubtitle {
+    margin-top: 20px;
+  }
+
+  .block.header .intro {
+    padding-top: 80px;
+  }
+
+  .block .intro {
+    min-height: 0;
+    padding-bottom: 80px;
+  }
+
+  .single {
+    background-color: #123a5e;
+  }
+
+  .toolBox {
+    width: 100%;
+    margin: 50px 0;
+    max-width: 1180px;
+    /*使用flex布局*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    /*选取space-around的居中且剩余空间平均分配*/
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .tool {
+    float: left;
+    width: 260px;
+    background-color: white;
+    margin: 5px;
+    text-align: center;
+    min-width: 380px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
+    transition: all 300ms linear;
+  }
+
+  .tool:hover {
+    transition: all 300ms linear;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 10px 10px;
+    transform: scale(1.02);
+  }
+
+  .tool.mobile {
+    max-width: 380px;
+  }
+
+  .toolImage {
+    height: 70px;
+    padding: 30px 20px;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+    cursor: pointer;
+  }
+
+  .toolImage.mobile {
+    text-align: center;
+  }
+
+  .tag {
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 8px;
+    width: 100%;
+    color: #2AB96C;
+    text-align: center;
+  }
+
+  p.description {
+    width: calc(100% - 60px);
+    margin: 20px 30px;
+    text-align: left;
+    height: calc(100% - 130px - 130px - 28px);
+    color: #425460;
+  }
+
+  .toolButton {
+    float: bottom;
+    size: 32px;
+    margin: 60px 0 25px 25px;
+    text-align: left;
+    color: #255f97;
+    cursor: pointer;
+  }
+
+  .toolButton:hover {
+    color: #00B2FF;
+  }
+
+  .toolButton:active {
+    margin: 61px 0 24px 25px;
+  }
+
+  span.emphasis {
+    padding: 2px 4px;
+    margin: 0 4px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.1);
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  a span.emphasis {
+    background-color: rgba(42, 185, 108, 0.2);
+    color: #17663b;
+  }
+
+  a span.emphasis:hover {
+    color: #2AB96C;
+    cursor: pointer;
+  }
+
+</style>

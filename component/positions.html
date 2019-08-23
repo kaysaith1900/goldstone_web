@@ -1,0 +1,131 @@
+<div class = "positionContent">
+  <script>
+    var positionTitles = [
+      setInternationalText('QA Engineer', '测试工程师'),
+      setInternationalText('DevOps Engineer', '运维工程师'),
+      setInternationalText('Frontend Engineer', '前端开发工程师'),
+      setInternationalText('Backend Engineer', '后端开发工程师'),
+      setInternationalText('Global Marketing Manager', '市场渠道经理'),
+      setInternationalText('User Support Executive', '用户支持')
+    ]
+    var responsibilities = [
+      'Review requirements, specifications and technical design documents to provide timely and meaningful feedback\n' +
+      'Create detailed, comprehensive and well-structured test plans and test cases\n' +
+      'Design, develop and execute automation scripts\n' +
+      'Liaise with development team to identify system requirement',
+      'Review requirements, specifications and technical design documents to provide timely and meaningful feedback\n' +
+      'Create detailed, comprehensive and well-structured test plans and test cases\n' +
+      'Design, develop and execute automation scripts\n' +
+      'Liaise with development team to identify system requirement',
+      'Review requirements, specifications and technical design documents to provide timely and meaningful feedback\n' +
+      'Create detailed, comprehensive and well-structured test plans and test cases\n' +
+      'Design, develop and execute automation scripts\n' +
+      'Liaise with development team to identify system requirement',
+      'Review requirements, specifications and technical design documents to provide timely and meaningful feedback\n' +
+      'Create detailed, comprehensive and well-structured test plans and test cases\n' +
+      'Design, develop and execute automation scripts\n' +
+      'Liaise with development team to identify system requirement',
+      'Review requirements, specifications and technical design documents to provide timely and meaningful feedback\n' +
+      'Create detailed, comprehensive and well-structured test plans and test cases\n' +
+      'Design, develop and execute automation scripts\n' +
+      'Liaise with development team to identify system requirement',
+    ]
+    var requirements = [
+      '5+ years of engineering, with 3+ years of experience in automation testing\n' +
+      'Experience in network and mobile end automation testing framework\n' +
+      'Experience in more than one scripting language',
+      '5+ years of engineering, with 3+ years of experience in automation testing\n' +
+      'Experience in network and mobile end automation testing framework\n' +
+      'Experience in more than one scripting language',
+      '5+ years of engineering, with 3+ years of experience in automation testing\n' +
+      'Experience in network and mobile end automation testing framework\n' +
+      'Experience in more than one scripting language',
+      '5+ years of engineering, with 3+ years of experience in automation testing\n' +
+      'Experience in network and mobile end automation testing framework\n' +
+      'Experience in more than one scripting language',
+      '5+ years of engineering, with 3+ years of experience in automation testing\n' +
+      'Experience in network and mobile end automation testing framework\n' +
+      'Experience in more than one scripting language'
+    ]
+    var skills = [
+      'Experience in performance testing\n' +
+      'Experience in security testing\n' +
+      'Experience in software development\n' +
+      'Good knowledge in block chain technology\n' +
+      'Participated in large open source project\n' +
+      'Honest, clear-minded, self-driven, well-coordinated, and always eager to learn',
+      'Experience in performance testing\n' +
+      'Experience in security testing\n' +
+      'Experience in software development\n' +
+      'Good knowledge in block chain technology\n' +
+      'Participated in large open source project\n' +
+      'Honest, clear-minded, self-driven, well-coordinated, and always eager to learn',
+      'Experience in performance testing\n' +
+      'Experience in security testing\n' +
+      'Experience in software development\n' +
+      'Good knowledge in block chain technology\n' +
+      'Participated in large open source project\n' +
+      'Honest, clear-minded, self-driven, well-coordinated, and always eager to learn',
+      'Experience in performance testing\n' +
+      'Experience in security testing\n' +
+      'Experience in software development\n' +
+      'Good knowledge in block chain technology\n' +
+      'Participated in large open source project\n' +
+      'Honest, clear-minded, self-driven, well-coordinated, and always eager to learn',
+      'Experience in performance testing\n' +
+      'Experience in security testing\n' +
+      'Experience in software development\n' +
+      'Good knowledge in block chain technology\n' +
+      'Participated in large open source project\n' +
+      'Honest, clear-minded, self-driven, well-coordinated, and always eager to learn'
+    ]
+    var responsibilitiesTitle = setInternationalText('Responsibilities', '岗位职责')
+    var requirementsTitle = setInternationalText('Requirements', '岗位要求')
+    var desiredSkills = setInternationalText('Desired Skills', '优先录取')
+    var positionsContent = $('.positionContent')
+    for (var index = 0; index < 5; index++) {
+      positionsContent.append('<div class=\'cell\'><h2>' + positionTitles[index] + '</h2><h3>' + responsibilitiesTitle + '</h3><p>' + responsibilities[index] + '</p><h3>' + requirementsTitle + '</h3><p>' + requirements[index] + '</p><h3>' + desiredSkills + '</h3><p>' + skills[index] + '</p></div>')
+    }
+    var positionsHeight = positionsContent.height() + 400
+    $('.positionsBackground').css({ height: positionsHeight })
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  @keyframes scale {
+    from {
+      box-shadow: rgba(0, 0, 0, 0.35) 0 3px 3px;
+      transform: scale(1);
+    }
+    to {
+      box-shadow: rgba(0, 0, 0, 0.35) 0 15px 15px;
+      transform: scale(1.02);
+    }
+  }
+
+  .positionContent {
+    margin: 0 auto;
+    max-width: 1180px;
+  }
+
+  .positionContent .cell h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .positionContent .cell h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #10365a;
+    font-family: "Avenir Next", Arial, serif;
+  }
+
+  .positionContent .cell p {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: pre-line;
+    color: #6a747d;
+  }
+
+</style>

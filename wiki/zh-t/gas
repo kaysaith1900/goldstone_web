@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>什麽是燃氣費 / 礦工費 / Gas?</title>
+    <!-- 支持utf-8 -->
+    <meta charset="utf-8">
+    <meta content="什麽是燃氣費 / 礦工費 / Gas?" name="description">
+    <meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 禁用用户手动缩放手势 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <!-- 设置webapp的icon -->
+    <link rel="apple-touch-icon-precomposed" href="logo.png" />
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content=G oldStone">
+    <link rel ="icon" sizes ="192x192" href ="../../assets/touch/chrome-touch-icon.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name ="apple-mobile-web-app-capable" content ="yes">
+    <meta name ="apple-mobile-web-app-status-bar-style" content ="black-translucent">
+    <meta name ="apple-mobile-web-app-title" content ="GoldStone">
+    <link rel ="apple-touch-icon" href ="../../assets/touch/apple-touch-icon.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name ="msapplication-TileImage" content ="../../assets/touch/ms-touch-icon.png">
+    <meta name ="msapplication-TileColor" content ="#2F3BA2">
+    <!-- Color the status bar on mobile devices -->
+    <meta name ="theme-color" content ="#3AB54A">
+    <!-- 引用mini js -->
+    <script src="../../scripts/jquery-2.2.0.min.js" type="text/javascript"></script>    <script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>
+    <script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>    <script src="../../scripts/headers/wikiHeader.js" type="text/javascript"></script>
+    <!-- 加载样式 -->
+    <link rel ="stylesheet " href ="../../css/main.css " type ="text/css " media ="all ">
+    <link rel ="stylesheet " href ="../../css/wiki.css " type ="text/css " media ="all ">
+</head>
+
+<body class="cursorDefault disableDefaultAction ">
+    <header class="headerView ">
+    </header>
+    <main class ="container ">
+        <h2 class="wiki tittle ">什麽是燃氣費 / 礦工費 / Gas?</h2>
+
+        <div class="block ">
+            <div class="dot green "></div>
+            <div class="contentTitle ">燃氣費 = 礦工費 = Gas</div>
+            <div class="content ">
+                <div class="paragraph ">
+                    <span class="attentionText ">燃氣費</span>
+                    ，也叫
+                    <span class="attentionText ">礦工費</span>
+                    或
+                    <span class="attentionText ">Gas</span>。是交易時向礦工支付的費用。
+                </div>
+                <div class="paragraph ">
+                    在以太坊中, 燃氣費以
+                    <span class="attentionText ">以太幣(ETH)</span>    計價。
+                    無論您轉賬何種代幣, 都需要 ether(ETH) 作為礦工費, 請保證妳發起轉賬的這裏地址裏至少有 0.01 個 ETH。
+                </div>
+                <div class="paragraph ">
+                    在GoldStone中, 您支付的
+                    <span class="attentionText ">全部燃氣費</span>
+                    都將發送給以太坊的礦工，Goldstone不會在交易中收取任何費用。
+                </div>
+            </div>
+        </div>
+
+        <div class="block ">
+            <div class="dot green "></div>
+            <div class="contentTitle ">GoldStone燃氣費</div>
+            <div class="content ">
+                <div class="paragraph ">
+                    在GoldStone中，我們會比對近期區塊中的Gas價格與交易達成的速度為您推薦合適的Gas策略，您可以選擇
+                    <span class="attentionText ">快速</span>
+                    <span class="attentionText ">標準</span>
+                    <span class="attentionText ">慢速</span>
+                    來進行交易，我們會自動為您匹配對應的燃氣數值。
+                </div>
+                <div class="paragraph ">
+                    在轉出ETH或其他代幣時，在燃氣設置界面，點選
+                    <span class="attentionText ">自定義燃氣費</span>
+                    可以手動設定燃氣數值。
+                </div>
+            </div>
+        </div>
+
+        <div class="block ">
+            <div class="dot green "></div>
+            <div class="contentTitle ">自定義燃氣費</div>
+            <div class="content ">
+                <div class="paragraph ">
+                    您也可以通過
+                    <span class="attentionText ">自定義燃氣費</span>
+                    來手動設定燃氣數值。
+                </div>
+                <div class="paragraph "><div class="formula">燃氣費 = 燃氣單價 x 實際消耗燃氣數量</div>
+                </div>
+
+                <div class="paragraph ">
+
+                    <span class="attentionText ">燃氣單價(Gas Price)</span>
+                    是您為每單位Gas付出的ETH數目。通常意義上，燃氣單價越高，交易完成越快。相對的，燃氣單價太低，交易可能就不會被礦工所錄入，造成交易很慢甚至壹直無法達成。
+                </div>
+
+                <div class="paragraph ">
+
+                    <span class="attentionText ">燃氣上限(Gas Limit)</span>
+                    是您本次交易願意付出的最大Gas數量。
+                    實際交易時消耗的Gas數量是根據交易所傳輸的數據量得出的。
+                </div>
+
+                <div class="paragraph ">
+
+                    普通的ETH轉賬需要的Gas數量是21000，如果交易附帶了更多信息（比如備註），那麽所需要的Gas數量也會相應增多。代幣(token)的轉賬則與token本身的協議不同而有所不同。
+                </div>
+
+                <div class="paragraph ">
+                    <div class="label">
+                        <div class="dot yellow "></div>
+                        <div>燃氣上限(Gas Limit)必須大於預估的Gas花費數量。</div>
+                    </div>
+
+                    <div class="label">
+                        <div class="dot yellow "></div>
+                        <div>當交易花費的燃氣數沒有達到您設置的燃氣上限，剩余的資金會退回到您的賬戶。</div>
+                    </div>
+
+                    <div class="label">
+                        <div class="dot yellow "></div>
+                        <div>當交易花費的燃氣數超過燃氣上限，燃氣耗盡，交易會停止。消耗掉的燃氣費不會退回。</div>
+                    </div>
+
+                </div>
+
+                <div class="paragraph ">
+                    您可以在GoldStone交易詳情中查看燃氣費的詳細信息。
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>

@@ -1,0 +1,100 @@
+<div class = "content">
+  <div class = "information"></div>
+  <div class = "wave"></div>
+  <div class = "joinUsIntro splitCellColor">
+    <div class = "intro">
+      <div class = "top"><h1 class = "introTitle centerText"></h1>
+        <p class = "introSubtitle centerText"></p></div>
+      <button class = "joinUsButton"></button>
+    </div>
+  </div>
+  <script>
+    var joinUsTitle = setInternationalText('Want To Work Together?', '想不想一起工作?')
+    var ourMission = setInternationalText('Our Mission', '我们的理念')
+    var ourVision = setInternationalText('Our Vision', '我们的愿景')
+    var ourBackground = setInternationalText('Our Background', '关于 GoldStone')
+    var togetherDescription = setInternationalText(
+      'each person brings their unique talents to work as a team and make a difference. If you are passionate about the block chain industry and are willing to explore the future of the block chain with us, welcome to join us!',
+      '每个人都将自己独特的才能带入团队，共同发挥作用。 如果您对区块链行业充满热情，并愿意与我们一起探索区块链的未来，欢迎加入我们！'
+    )
+
+    $('.introSubtitle').html(togetherDescription)
+    $('.introTitle').html(joinUsTitle)
+    $('.joinUsButton')
+      .html(setInternationalText('JOIN US', '加入我们'))
+      .click(function() {
+        loadJoinUs()
+      })
+
+    var titles = [ourMission, ourVision, ourBackground]
+    var descriptions = [
+      setInternationalText(
+        'We firmly believe that the blockchain technology can be widely used in various fields. Its unique traceability and trust mechanism will greatly enhance the efficiency of production collaboration in institutions and the world. At the same time, we also believe that as a convenient and safe The digital cryptocurrency wallet carries not only the security of the user\'s property, but also the link between the individual and the blockchain. For this reason we will tirelessly improve and polish our products.',
+        '我们相信区块链这项技术可以被广泛的应用在各个领域, 它所独有的可溯源以及信任机制会大大的提高机构乃至全世界的生产协作效率. 同时我们也坚信作为一款便捷安全的数字加密货币钱包所承载的不仅仅是安全的保管用户的财产, 同时也是链接个体与区块链的纽带.为此我们将孜孜不倦的完善和打磨我们的产品.'
+      ),
+      setInternationalText(
+        'Blockchain is a new technology. Although it has achieved impressive results in the financial field, it can be pushed to more fields, but it is still in the process of exploration. For the majority of ordinary users, understanding and using the area Blockchain-related products require a lot of knowledge, and the operation is more difficult for the general population. We hope to use our expertise and understanding of the general public to create an easy-to-use and easy-to-use Safe and powerful blockchain wallet products help you safely keep assets, convenient trading assets. We also provide users with safe and useful third-party DAPP under strict audit.',
+        '区块链是一项新技术, 虽然已经在金融领域取得了令人赞许的成绩, 可把它推向更多的领域，目前却还处于探索中. 对于广大普通用户来说, 理解和使用区块链相关的产品需要掌握的知识有很多, 这其中的操作对普通人群来说更是晦涩难懂. 我们期望能够利用我们的专业知识以及对大众人群的理解, 来打造一款简单易用又安全强大的区块链钱包产品帮助大家安全的保管资产,  便捷的交易资产. 我们也会在严格的审核下为用户带来安全有用的第三方 DAPP.'
+      ),
+      setInternationalText(
+        'We specialize in the development of blockchain technology and have unique insights and experience in the development of digital cryptocurrency wallets, Ethereum and EOS smart contracts. We have been tirelessly pursuing the production of fully decentralized DAPP.',
+        '我们专注于区块链技术的研发, 在数字加密货币钱包, Ethereum 及 EOS 智能合约开发上有独到的见解和经验. 我们一直在孜孜不倦的追求生产出完全的去中心化的 DAPP.'
+      )
+    ]
+    for (var index = 0; index < 3; index++) {
+      $('.information').append('<div class = "cell"><h1>' + titles[index] + '</h1><p>' + descriptions[index] + '</p></div>')
+    }
+
+    // Mobile Detecting
+    if (isMobile === true) {
+      scaleIntroTitle()
+      $('.joinUsIntro .intro').css({ paddingTop: 30 })
+    }
+    addWave()
+  </script>
+</div>
+
+<style type = "text/css" media = "screen">
+  .intro {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .joinUsIntro {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 150px;
+  }
+
+  .joinUsIntro button {
+    position: absolute;
+    left: 50%;
+    margin-top: 40px;
+    margin-left: -130px;
+    width: 260px;
+  }
+
+  .information {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding-bottom: 50px;
+  }
+
+  .cell {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .information h1 {
+    color: black;
+    font-weight: bold;
+  }
+
+  .information p {
+    font-family: "Avenir Next", Arial, serif;
+    font-weight: 500;
+    color: #6a747d;
+  }
+</style>

@@ -1,0 +1,778 @@
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, rgba(14, 108, 140, 0.6));
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, rgba(18, 39, 80, 0.1));
+}
+.fillGreen {
+  background-color: #2AB96C;
+}
+.fillWhite {
+  background-color: white;
+}
+.fillYellow {
+  background-color: #ffeb00;
+}
+.fillCyan {
+  background-color: #8DE2C0;
+}
+.fillBlue {
+  background-color: #00B2FF;
+}
+.fillOrange {
+  background-color: #E75E42;
+}
+.fillDarkBlue {
+  background-color: #122750;
+}
+.fillDarkGreen {
+  background-color: #0e6c8c;
+}
+/* 灰色 */
+.fillBackgroundGray {
+  background-color: #F4F7FA;
+}
+.fillLightGray {
+  background-color: #B9BFC6;
+}
+/* 字体颜色 */
+.fontWhite {
+  color: white;
+}
+.fontGray {
+  color: rgba(0, 0, 0, 0.4);
+}
+.fontBlack {
+  color: #333F50;
+}
+.fontOrange {
+  color: #E75E42;
+}
+.fontGreen {
+  color: #2AB96C;
+}
+.fontWhite {
+  color: white;
+}
+.fontYellow {
+  color: #ffeb00;
+}
+.fontCyan {
+  color: #8DE2C0;
+}
+.fontBlue {
+  color: #00B2FF;
+}
+/* 渐变色 */
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, #114B6D);
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, #122750);
+}
+.navigationTitle {
+  font-size: 18px;
+  font-weight: normal;
+}
+.bigTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+.heading1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.heading2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.heading3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.contentText {
+  font-size: 14px;
+  font-weight: normal;
+}
+.signature {
+  font-size: 14px;
+  font-weight: normal;
+}
+html,
+body {
+  font-family: 'englishFont', PingFangSC-Regular, PingFangTC-Regular, Microsoft YaHei, STHeiti Light, serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #425460;
+}
+.attentionText {
+  font-weight: 900;
+  margin: 0 1px 0 1px;
+  padding: 2px 4px 1px 4px;
+  background-color: rgba(37, 143, 48, 0.07);
+  border-radius: 3px;
+}
+header {
+  float: left;
+  width: 100%;
+}
+/* 去掉点击时的蓝色阴影 */
+a {
+  color: #122750;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+a:hover {
+  color: #2AB96C;
+}
+a:active {
+  color: #00B2FF;
+}
+a:visited {
+  color: #122750;
+}
+.main {
+  float: left;
+  width: 100%;
+}
+/*自定义字体*/
+@font-face {
+  font-family: 'englishFont';
+  src: url('../assets/fonts/english-font-bold.eot') format('eot'), url('../assets/fonts/english-font-bold.ttf') format('ttf'), url('../assets/fonts/english-font-bold.woff') format('woff'), url('../assets/fonts/english-font-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'englishFont';
+  src: url('../assets/fonts/english-font-light.eot') format('eot'), url('../assets/fonts/english-font-light.ttf') format('ttf'), url('../assets/fonts/english-font-light.woff') format('woff'), url('../assets/fonts/english-font-light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'englishFont';
+  src: url('../assets/fonts/english-font-bolder.eot') format('eot'), url('../assets/fonts/english-font-bolder.ttf') format('ttf'), url('../assets/fonts/english-font-bolder.woff') format('woff'), url('../assets/fonts/english-font-bolder.svg') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+html,
+body {
+  position: absolute;
+  z-index: -1000;
+  background: #CBDEE1;
+}
+body {
+  height: 100%;
+}
+main {
+  margin-top: 24px;
+}
+.backgroundLayer {
+  position: absolute;
+  z-index: -200;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+}
+.gradientWhiteMask {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+}
+.normalWhiteMask {
+  position: fixed;
+  top: 350px;
+  width: 100%;
+  height: calc(100% - 350px);
+  background: linear-gradient(rgba(255, 255, 255, 0.7), #ffffff);
+}
+.normalFooterWhiteMask {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+}
+.headerContent {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+#particles-js {
+  position: fixed;
+  top: -20%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.headerView {
+  float: left;
+  height: 250px;
+}
+.appLogo {
+  position: absolute;
+  margin-top: 90px;
+  margin-left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-image: url('../assets/logo.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.appName {
+  position: absolute;
+  width: 100%;
+  margin-top: 200px;
+  text-align: center;
+}
+.heavyTitle {
+  color: black;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+}
+.boldTitle {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+}
+.icon {
+  float: left;
+  width: 50%;
+  border-color: #EAFEE8;
+}
+.separation {
+  float: left;
+  margin-top: -12px;
+  margin-left: calc(50% - 50px);
+  height: 3px;
+  width: 100px;
+  background-color: #000;
+}
+.content {
+  float: left;
+  margin: 5px 0 15px 0;
+  width: 100%;
+}
+.featureTitle {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  float: left;
+  margin: 5px 0 0 0;
+  width: 100%;
+}
+.paragraph {
+  margin: 5px 30px 6px 30px;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+.attentionParagraph {
+  margin: 10px 30px 10px 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #2AB96C;
+  font-weight: 900;
+}
+.featureBlock {
+  height: 150px;
+  padding: 35px 20px 0 20px;
+}
+.featureElement {
+  float: left;
+  padding: 0 calc(25% - 55px) 0 calc(25% - 55px);
+  width: 110px;
+}
+.featureIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: #EAFEE8;
+}
+.featureTitle {
+  float: left;
+  margin-top: 10px;
+}
+footer {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.investorLogo {
+  float: left;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  border-radius: 60px;
+}
+/* -----这里是引用的资源图片----- */
+.safeIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: #EAFEE8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-image: url('../assets/icon/safe_icon.png');
+}
+.speedyIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: #EAFEE8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-image: url('../assets/icon/speedy_icon.png');
+}
+.SequoiaCapitalIcon {
+  float: left;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  background-image: url('../assets/icon/sequoia_capital_icon.png');
+}
+.TencentIcon {
+  float: left;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  background-image: url('../assets/icon/tencent_icon.png');
+}
+.SinovationVenturesIcon {
+  float: left;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+  background-image: url('../assets/icon/sinovation_ventures_icon.png');
+}
+.ZhenFundIcon {
+  float: left;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+  background-image: url('../assets/icon/zhen_fund_icon.png');
+}
+/*禁止显示touch选中效果*/
+.disableDefaultAction {
+  -webkit-touch-callout: none;
+}
+body {
+  -webkit-touch-callout: none;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorDefault {
+  cursor: default;
+}
+.noTouchStyleOnMobileDevice {
+  -webkit-tap-highlight-color: transparent;
+}
+.fullSize {
+  width: 100%;
+  height: 100%;
+}
+.fullFill {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.flexContainerWrap {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  /*items纵轴居中*/
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  /*行纵轴居中*/
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  align-content: flex-start;
+}
+.flexContainerWrap1 {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  /*items纵轴居中*/
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  /*行纵轴居中*/
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+.flexContainer {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  /*items纵轴居中*/
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  /*行纵轴居中*/
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+.downloadButtonBox {
+  /*使用flex布局*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  /*新的元素可换行显示，不加此代码会挤在一行*/
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  /*选取space-around的居中且剩余空间平均分配*/
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  /*items纵轴居中*/
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  /*行纵轴居中*/
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  align-content: flex-start;
+  float: left;
+  width: 90%;
+  height: auto;
+  margin: 5px 5%;
+}
+.getAppButton {
+  cursor: pointer;
+  float: left;
+  width: 140px;
+  height: 36pt;
+  padding: 0 0 0 16pt;
+  border-radius: 4px;
+  margin: 10pt 5pt 0 5pt;
+  text-align: center;
+  font-weight: bold;
+}
+.getAppButton:hover {
+  margin-top: 7px;
+  margin-bottom: 9px;
+}
+.getAppButton:active {
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+.googlePlayButton {
+  cursor: pointer;
+  float: left;
+  width: 140px;
+  height: 36pt;
+  padding: 0 0 0 16pt;
+  border-radius: 4px;
+  margin: 10pt 5pt 0 5pt;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+}
+.googlePlayButton:hover {
+  margin-top: 7px;
+  margin-bottom: 9px;
+}
+.googlePlayButton:active {
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+.getAPKButton {
+  cursor: pointer;
+  float: left;
+  width: 140px;
+  height: 36pt;
+  padding: 0 0 0 16pt;
+  border-radius: 4px;
+  margin: 10pt 5pt 0 5pt;
+  text-align: center;
+  font-weight: bold;
+  background-color: #2AB96C;
+}
+.getAPKButton:hover {
+  margin-top: 7px;
+  margin-bottom: 9px;
+}
+.getAPKButton:active {
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+.buttonSubText {
+  float: left;
+  width: 100%;
+  font-size: 10pt;
+  line-height: 10pt;
+  margin: 6pt 0 0 0;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+.buttonSubText.zh {
+  font-size: 8pt;
+  line-height: 8pt;
+  margin-bottom: 2px;
+}
+.buttonText {
+  float: left;
+  margin: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14pt;
+  line-height: 14pt;
+  color: white;
+}
+.downloadButton {
+  float: left;
+  margin: 40px calc(50% - 85px);
+  width: 170px;
+  height: auto;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  outline: 0;
+}
+.downloadMainButton {
+  margin: 0;
+  background-color: #2AB96C;
+}
+.downloadMainButton:hover {
+  margin-top: 1px;
+}
+.downloadMainButton:active {
+  margin-top: 2px;
+}
+.downloadButtonTitle {
+  font-size: 18px;
+  margin-left: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+.downloadButtonTitle.ascii {
+  margin-top: 17px;
+}
+.downloadButtonTitle.unicode {
+  margin-top: 12px;
+}
+.ButtonShadow {
+  position: absolute;
+  z-index: -20;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.versionDescription {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+.smallTitle {
+  margin: 0 30px 0 30px;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+}
+.singleFeatureElement {
+  float: left;
+  padding: 0 calc(50% - 55px);
+  width: 110px;
+}
+.getDownloadIcon {
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 55px;
+  border-width: 2px;
+  border-color: black;
+}
+.getDownloadText {
+  margin: 0 30px 0 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #2AB96C;
+}
+.getDownloadText:active {
+  color: #00B2FF;
+}
+.getDownloadText:hover {
+  color: #00B2FF;
+}
+.footerText {
+  margin: 0 30px 0 30px;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+.footerElement {
+  float: left;
+  margin: 0 calc(50% - 50px) 0 calc(50% - 50px);
+  width: 100px;
+}
+.footerIcon {
+  height: 60px;
+  margin: 20px;
+  border-radius: 100px;
+  background-color: black;
+}
+/* -----这里是引用的资源图片----- */
+.buttonIcon {
+  position: absolute;
+  margin: 8pt -8pt;
+  width: 20pt;
+  height: 20pt;
+}
+.androidIcon {
+  position: absolute;
+  margin: 8pt -8pt;
+  width: 20pt;
+  height: 20pt;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url('../assets/icon/android_icon.png');
+}
+.googlePlayIcon {
+  position: absolute;
+  margin: 8pt -8pt;
+  width: 20pt;
+  height: 20pt;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url('../assets/icon/play_icon.png');
+}
+.elegantIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: #EAFEE8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-image: url('../assets/icon/elegant_icon.png');
+}
+.easyIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: #EAFEE8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
+  background-image: url('../assets/icon/easy_icon.png');
+}
+.observeIcon {
+  height: 110px;
+  border-radius: 55px;
+  background-color: #EAFEE8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-image: url('../assets/icon/market_icon.png');
+}
+.fingerIcon {
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 55px;
+  border-width: 2px;
+  border-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-image: url('../assets/icon/finger_icon.png');
+}
+.teamIcon {
+  height: 60px;
+  margin: 20px;
+  border-radius: 100px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-image: url('../assets/icon/blink_icon.png');
+}
+.emailIcon {
+  height: 60px;
+  margin: 20px;
+  border-radius: 100px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  background-image: url('../assets/icon/contact_icon.png');
+}

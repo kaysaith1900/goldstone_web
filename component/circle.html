@@ -1,0 +1,73 @@
+<div class = "circleWrapper">
+  <div class = "bottomCircle">
+    <div class = "middleCircle centerAbsolute">
+      <div class = "topCircle centerAbsolute">
+        <img class = "centerAbsolute" src = "'./../resources/images/check.svg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type = "text/css" media = "screen">
+  @keyframes breath {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .circleWrapper .bottomCircle {
+    position: relative;
+    margin-left: calc((100% - 280px) / 2);
+    margin-top: 100px;
+    width: 280px;
+    height: 280px;
+    background-color: #16416b;
+    border-radius: 140px;
+    animation-name: breath;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+
+  .circleWrapper .middleCircle {
+    width: 200px;
+    height: 200px;
+    background-color: #255f97;
+    border-radius: 140px;
+    margin-top: -100px;
+    margin-left: -100px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 50px;
+  }
+
+  .circleWrapper .topCircle {
+    width: 140px;
+    height: 140px;
+    background-color: #47a5ff;
+    border-radius: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 50px;
+  }
+
+  .circleWrapper .topCircle img {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    box-shadow: none;
+  }
+
+  .centerAbsolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 50px;
+  }
+</style>

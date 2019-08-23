@@ -1,0 +1,61 @@
+@import "main";
+
+//资源路径
+@logoUrl: '../assets/logo.png';
+
+.container {
+  float: left;
+  margin: 30px 20px 60px 20px;
+}
+
+.conditionBlock {
+  float: left;
+  margin-top: 10px;
+  width: 100%
+}
+
+.signatureBlock {
+  float: left;
+  margin-top: 20px;
+  width: 100%
+}
+
+.appIcon {
+  float: left;
+  margin: 0 auto;
+  width: 26px;
+  height: 26px;
+  .addImage(26px, @logoUrl)
+}
+
+.appName {
+  .navigationTitle;
+  margin-left: 36px;
+  margin-top: 0;
+  width: 100% - 36px;
+  white-space : nowrap;
+  color: @blueGray;
+}
+
+.headerTitle {
+  margin-top: 100px;
+  margin-bottom: 0;
+  .bigTitle
+}
+
+.subtitle {
+  .heading1
+}
+
+.thirdOrderTitle{
+  .heading2;
+  margin-bottom: 0;
+}
+
+.contentText {
+  width: auto
+}
+
+.bulletContent {
+  margin: 0;
+}

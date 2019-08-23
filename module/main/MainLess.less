@@ -1,0 +1,180 @@
+@headerHeight: 90px;
+@maxWidth: 1180px;
+@minWidth: 360px;
+@mainFont: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.container {
+  float: left;
+  width: 100%;
+  padding-top: @headerHeight;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  max-width: @maxWidth;
+  min-width: @minWidth;
+  padding-left: calc((100vw - @maxWidth) / 2);
+  padding-right: calc((100vw - @maxWidth) / 2);
+  height: @headerHeight;
+  margin: auto 0;
+  z-index: 100;
+}
+
+header .content {
+  width: calc(100% - 40px);
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header .content .logo {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 200px;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+}
+
+header .content .logo img {
+  width: 40px;
+  height: 40px;
+  margin-top: calc((@headerHeight - 36px) / 2);
+  margin-right: 20px;
+  float: left;
+}
+
+header .content .logo span {
+  font-weight: 900;
+  font-family: @mainFont;
+  color: white;
+  font-size: 18px;
+  line-height: 95px;
+  height: 100%;
+  float: left;
+}
+
+header .content ul {
+  height: @mainFont;
+  float: right;
+}
+
+header .content ul li {
+  line-height: 95px;
+  font-family: @mainFont;
+  font-weight: 600;
+  margin-left: 40px;
+  float: left;
+  cursor: pointer;
+}
+
+.introTitle {
+  font-size: 42px;
+  color: white;
+  font-weight: bold;
+  font-family: @mainFont;
+  white-space: pre-line;
+}
+
+.introSubtitle {
+  font-size: 16px;
+  opacity: 0.65;
+  color: white;
+  font-weight: 400;
+  font-family: @mainFont;
+  white-space: pre-line;
+}
+
+.template {
+  position: relative;
+  width: 100%;
+  max-width: @maxWidth;
+  min-width: @minWidth;
+  margin: 0 auto;
+}
+
+.home {
+  position: relative;
+  min-height: 620px;
+  width: 100%;
+  max-width: @maxWidth;
+  min-width: @minWidth;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 30px;
+}
+
+.left {
+  margin: 0;
+  float: left;
+  min-width: 360px;
+  width: 100%;
+}
+
+.webLeft {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 500px;
+}
+
+.right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-48%);
+  position: absolute;
+  max-width: 700px;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+}
+
+.introPicture {
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+}
+
+.template .top {
+  max-width: 700px;
+  margin: 80px auto 0;
+}
+
+.centerText {
+  padding: 0 25px;
+  text-align: center;
+}
+
+.rightText {
+  text-align: right;
+}
+
+.mobileSubtitle {
+  font-size: 14px;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+}
+
+.page .circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 45px solid #163d62;
+  border-radius: 300px;
+  bottom: -250px;
+  left: -100px;
+  z-index: -1;
+}

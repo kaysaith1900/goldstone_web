@@ -1,0 +1,213 @@
+@import "../main";
+
+// icon路径
+@logoCatalogUrl: "../assets/";
+@iconCatalogUrl: "../assets/icon/";
+
+// 下面是icon的引用
+@logoUrl: '@{logoCatalogUrl}logo.png';
+@guideIconUrl: '@{iconCatalogUrl}lego-toy.png';
+@transferIconUrl: '@{iconCatalogUrl}money-network.png';
+@walletIconUrl: '@{iconCatalogUrl}financial-care.png';
+
+html,
+body {
+  position: absolute;
+  z-index: -2;
+  background: @darkBlue;
+  height: 100%;
+}
+
+.header {
+  position: absolute;
+  z-index: -200;
+  .fullSize
+}
+
+.backgroundLayer {
+  z-index: -1;
+  height: 200px;
+  .blueToGreen
+}
+
+.top.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo:hover {
+  top: 21px;
+}
+
+.logo:active {
+  top: 22px;
+}
+
+.container {
+  float: left;
+  margin-top: 200px;
+  padding: 30px 40px;
+  width: calc(100% - 80px);
+  height: auto;
+  background-color: white;
+  z-index:  -1;
+  .flexContainerWrap;
+}
+
+@blockPaddingSize: 25px;
+@blockHoverChangeSize: 10px;
+.block {
+  width: 240px;
+  height: auto;
+  padding: @blockPaddingSize;
+  margin: 15px 10px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 2px 25px rgba(105, 118, 140, 0.2);
+  cursor: pointer;
+  &:hover {
+    padding: @blockPaddingSize + @blockHoverChangeSize;
+    margin: 14px - @blockHoverChangeSize 10px - @blockHoverChangeSize  16px - @blockHoverChangeSize 10px - @blockHoverChangeSize;
+    box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.4)
+  }
+  &:active {
+    margin: 13px 10px 17px 10px;
+    box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.4)
+  }
+}
+
+.blockIcon {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center;
+}
+
+.shadow {
+  box-shadow: 1px 1px 25px rgba(105, 118, 140, 0.1)
+}
+
+
+/* 下面是字体们的样式 */
+
+
+h3.pageDescription{
+  color: fade(white, 50%);
+  position: absolute;
+  top: 140px;
+  left: 10%;
+  width: 80%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center
+}
+
+h1.title {
+  color: white;
+  float: left;
+  width: 100%;
+  margin-top: 75px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center
+}
+
+.pageIntroduction {
+  color: fade(white, 50%);
+  float: left;
+  height: 20px;
+  padding: 40px 30px;
+  width: calc(100% - 60px);
+  text-align: center;
+  .fillBlue
+}
+
+.blockName {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.blockDescription {
+  color: fade(black, 50%);
+  width: 100%;
+  margin: -2px 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+/* 下面是icon的引用 */
+.logo {
+  .blockIcon;
+  .addImage(90%, @logoUrl)
+}
+
+.guideIcon {
+  .blockIcon;
+  .addImage(100%, @guideIconUrl)
+}
+
+.transferIcon {
+  .blockIcon;
+  .addImage(100%, @transferIconUrl)
+}
+
+.walletIcon {
+  .blockIcon;
+  .addImage(90%, @walletIconUrl)
+}
+
+
+/* 页底标识 */
+footer {
+  float: left;
+  padding: 30px 30px 50px 30px;
+  height: auto;
+  width: calc(100% - 60px);
+}
+
+.bottom.logo {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.bottom.name {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 0 0 20px 0;
+}
+
+.linkContainer {
+  float: left;
+  margin: 0 10% 20px 10%;
+  width: calc(100% - 80px);
+}
+
+a.footerItem {
+  text-align: left;
+  margin: 5px 25px;
+  font-size: 14px;
+  font-weight: normal;
+  color: fade(white, 50%);
+  &:active {color: white;}
+  &:hover {color: #2AB96C;}
+}
+
+.copyRight {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.3);
+}

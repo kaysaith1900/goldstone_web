@@ -1,0 +1,66 @@
+.green {
+  background-color: #2AB96C;
+}
+.white {
+  background-color: white;
+}
+.yellow {
+  background-color: #ffeb00;
+}
+.cyan {
+  background-color: #8DE2C0;
+}
+.blue {
+  background-color: #00B2FF;
+}
+.organge {
+  background-color: #E75E42;
+}
+.darkBlue {
+  background-color: #122750;
+}
+.darkGreen {
+  background-color: #0e6c8c;
+}
+/* 灰色 */
+.backgroundGray {
+  background-color: #F6F7FB;
+}
+.lightGray {
+  background-color: #B9BFC6;
+}
+/* 字体颜色 */
+.fontWhite {
+  color: white;
+}
+.fontGray {
+  color: #B9BFC6;
+}
+.fontBlack {
+  color: #777777;
+}
+.fontOrange {
+  color: #E75E42;
+}
+.fontGreen {
+  color: #2AB96C;
+}
+.fontWhite {
+  color: white;
+}
+.fontYellow {
+  color: #ffeb00;
+}
+.fontCyan {
+  color: #8DE2C0;
+}
+.fontBlue {
+  color: #00B2FF;
+}
+/* 渐变色 */
+.blueToGreen {
+  background: linear-gradient(180deg, #122750, #114B6D);
+}
+.greenToBlue {
+  background: linear-gradient(120deg, #0e6c8c, #122750);
+}
